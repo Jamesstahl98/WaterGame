@@ -6,14 +6,17 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Thrust")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxThrust;
     [SerializeField] private float minThrust;
-    [SerializeField] private float gasTick;
-    [SerializeField] private float rotateSpeed;
-
+    [SerializeField] private float thrustTick;
     [SerializeField] private Slider thrustSlider;
+
+    [Header("Rotation")]
+    [SerializeField] private float torqueTick;
+    [SerializeField] private float maxTorque;
 
     private Transform orientation;
     private Rigidbody rb;
@@ -21,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     private float horizontalInput;
     private float currentThrust = 0;
+    private float currentTorque = 0;
 
     void Awake()
     {
@@ -32,40 +36,62 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        MyInput();
-        SpeedControl();
+        GetInput();
+        CapSpeed();
     }
 
     void FixedUpdate()
     {
         MovePlayer();
+        RotatePlayer();
     }
 
-    private void MyInput()
+    private void GetInput()
     {
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        if (verticalInput == 1)
-        {
-            if (currentThrust > maxThrust) { return; }
-            currentThrust += gasTick;
-        }
-        else if (verticalInput == -1)
-        {
-            if (currentThrust < minThrust) { return; }
-            currentThrust -= gasTick;
-        }
-        thrustSlider.value = currentThrust;
     }
 
     private void MovePlayer()
     {
-        transform.Rotate(0f, horizontalInput * rotateSpeed, 0f);
+        if (verticalInput == 1)
+        {
+            if (currentThrust < maxThrust)
+                currentThrust += thrustTick;
+        }
+        else if (verticalInput == -1)
+        {
+            if (currentThrust > minThrust)
+                currentThrust -= thrustTick;
+        }
+
+        thrustSlider.value = currentThrust;
+
         rb.AddForce(transform.forward * currentThrust, ForceMode.Force);
     }
 
-    private void SpeedControl()
+    private void RotatePlayer()
+    {
+        if (horizontalInput == 1)
+        {
+            if (currentTorque < maxTorque)
+                currentTorque += torqueTick;
+        }
+        else if (horizontalInput == -1)
+        {
+            if (currentTorque > -maxTorque)
+                currentTorque -= torqueTick;
+        }
+
+        else
+        {
+            currentTorque /= 1.03f;
+        }
+
+        transform.Rotate(0f, currentTorque, 0f);
+    }
+
+    private void CapSpeed()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
