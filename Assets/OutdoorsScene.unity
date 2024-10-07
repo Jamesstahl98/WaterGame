@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2261.928, g: 2403.6272, b: 3501.2817, a: 1}
+  m_IndirectSpecularColor: {r: 2257.3467, g: 2398.0623, b: 3492.894, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -742,7 +742,7 @@ Transform:
   m_GameObject: {fileID: 810316411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0921364, z: 0}
+  m_LocalPosition: {x: 0, y: -0.026254807, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -789,11 +789,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e56ee82cd8efe5498f51429833efed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 7
+  maxSpeed: 4
   minSpeed: -2
-  maxThrust: 10
-  minThrust: -5
-  thrustTick: 0.5
+  maxThrust: 4
+  minThrust: -2
+  thrustTick: 0.1
   thrustSlider: {fileID: 1035997481}
   torqueTick: 0.03
   maxTorque: 1.5
@@ -1288,7 +1288,7 @@ Transform:
   m_GameObject: {fileID: 1147372375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.9078636, z: -3}
+  m_LocalPosition: {x: 0, y: 5.9737453, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2000,7 +2000,7 @@ Transform:
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.52573115, y: 0, z: 0, w: 0.85065085}
-  m_LocalPosition: {x: 0, y: 5.9078636, z: -3}
+  m_LocalPosition: {x: 0, y: 5.9737453, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
