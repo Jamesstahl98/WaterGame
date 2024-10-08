@@ -745,7 +745,7 @@ Rigidbody:
   m_GameObject: {fileID: 810316411}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 4
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -775,11 +775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e56ee82cd8efe5498f51429833efed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 19
-  minSpeed: -8
-  maxThrust: 6
-  minThrust: -3
-  thrustTick: 0.1
+  maxSpeed: 5
+  minSpeed: -2
+  maxThrust: 15
+  minThrust: -5
+  thrustTick: 0.5
   thrustSlider: {fileID: 1035997481}
   torqueTick: 0.01
   maxTorque: 1
@@ -864,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 817574992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.061356913, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0054538175, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
