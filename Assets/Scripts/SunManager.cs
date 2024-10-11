@@ -6,25 +6,28 @@ using UnityEngine.Rendering.HighDefinition;
 public class SunManager : MonoBehaviour
 {
     private DayNightCycle dayNightCycle;
+    private HDAdditionalLightData lightData;
     private Light light;
 
     [SerializeField] private float sunIntensity;
+    [SerializeField] private float sunTemperature;
     [SerializeField] AnimationCurve sunIntensityCurve;
+    [SerializeField] AnimationCurve sunTemperatureCurve;
 
     private void Awake()
     {
         light = GetComponent<Light>();
+        lightData = GetComponent<HDAdditionalLightData>();
         dayNightCycle = GameObject.Find("TimeManager").GetComponent<DayNightCycle>();
+        lightData.EnableColorTemperature(true);
     }
 
     private void Update()
     {
         float intensityCurve = sunIntensityCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
-        HDAdditionalLightData lightData = light.GetComponent<HDAdditionalLightData>();
+        float temperatureCurve = sunTemperatureCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
 
-        if(lightData != null)
-        {
-            light.intensity = intensityCurve * sunIntensity;
-        }
+        lightData.SetIntensity(intensityCurve * sunIntensity);
+        light.colorTemperature = temperatureCurve * sunTemperature;
     }
 }

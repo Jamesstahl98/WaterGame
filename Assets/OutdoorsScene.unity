@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1324.9454, g: 1484.8029, b: 2421.0276, a: 1}
+  m_IndirectSpecularColor: {r: 1534.6749, g: 1516.6915, b: 2068.465, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2531,7 +2531,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 72942.79
+  m_Intensity: 70156.26
   m_Range: 5178.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2574,7 +2574,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 130.02, y: 190.58}
   m_BounceIntensity: 1
-  m_ColorTemperature: 7471
+  m_ColorTemperature: 6212
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 115.35374}
   m_UseBoundingSphereOverride: 0
@@ -2611,7 +2611,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 72942.79
+  m_Intensity: 70156.26
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -2750,6 +2750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunIntensity: 100000
+  sunTemperature: 8000
   sunIntensityCurve:
     serializedVersion: 2
     m_Curve:
@@ -2807,6 +2808,66 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sunTemperatureCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0000017797574
+      value: 0.68418294
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24834085
+      value: 0.6834452
+      inSlope: -0.006956298
+      outSlope: -0.006956298
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.42420828
+      value: 0.5513446
+      inSlope: 0.101226315
+      outSlope: 0.101226315
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5879272
+      value: 0.6505821
+      inSlope: 0.008559494
+      outSlope: 0.008559494
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8273154
+      value: 0.6514447
+      inSlope: 0.008148472
+      outSlope: 0.008148472
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0113678
+      value: 0.6828191
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -14226,7 +14287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c78f335b68a5364e98d15e395ee49b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeModifier: 0.1
+  timeModifier: 1
   startTime: 8
 --- !u!4 &1368287275
 Transform:
@@ -22527,7 +22588,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06989743
+      value: -0.2533698
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
