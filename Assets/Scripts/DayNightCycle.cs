@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
 {
+    [SerializeField] private float timeModifier = 1f;
     [SerializeField] private float startTime = 8f;
     public float CurrentTime
     {
-        get { return (Time.time + startTime) % 24f; }
+        get { return ((Time.time * timeModifier) + startTime) % 24f; }
     }
 
     private void Update()
