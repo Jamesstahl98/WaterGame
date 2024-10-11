@@ -18,9 +18,4 @@ public class DayNightCycle : MonoBehaviour
             Debug.Log(CurrentTime);
         }
     }
-
-    private void UpdateTime()
-    {
-
-    }
 }
