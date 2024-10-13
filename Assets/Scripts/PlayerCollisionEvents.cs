@@ -4,19 +4,34 @@ using UnityEngine;
 
 public class PlayerCollisionEvents : MonoBehaviour
 {
+    [SerializeField] private IInteractable currentInteractable;
+
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "FishSchool")
+        if (other.tag == "Interactable")
         {
-            other.gameObject.GetComponent<FishingTrigger>().PlayerEnteredTrigger();
+            other.gameObject.GetComponent<FishingInteractable>().PlayerEnteredTrigger();
+            currentInteractable = other.gameObject.GetComponent<FishingInteractable>();
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "FishSchool")
+        if (other.tag == "Interactable")
         {
-            other.gameObject.GetComponent<FishingTrigger>().PlayerLeftTrigger();
+            other.gameObject.GetComponent<FishingInteractable>().PlayerLeftTrigger();
+            currentInteractable = null;
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(currentInteractable != null)
+            {
+                currentInteractable.Interact();
+            }
         }
     }
 }
