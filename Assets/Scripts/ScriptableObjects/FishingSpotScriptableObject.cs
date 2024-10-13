@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FishingSpot", menuName = "ScriptableObjects/FishingSpotScriptableObject")]
 public class FishingSpotScriptableObject : ScriptableObject
 {
+    [Header("Fishes and FishesCount must have the same number of elements")]
     public List<FishScriptableObject> fishes;
-
+    public List<int> fishesCount;
 }

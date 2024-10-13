@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class FishingInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string scene;
     [SerializeField] private GameObject userInterfaceGraphic;
+    [SerializeField] private FishingSpotScriptableObject fishingSpot;
+    [SerializeField] private GameObject fishingSpotBuilderPrefabt;
 
     public void PlayerEnteredTrigger()
     {
@@ -21,6 +22,6 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        SceneManager.LoadScene(scene);
+        SceneSwapper.GoToFishingScene(fishingSpot, fishingSpotBuilderPrefabt);
     }
 }

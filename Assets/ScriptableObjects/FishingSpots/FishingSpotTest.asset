@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562986e7c107d4446a72bf2c442c6979, type: 3}
   m_Name: FishingSpotTest
   m_EditorClassIdentifier: 
+  fishes:
+  - {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
+  fishesCount: 02000000
