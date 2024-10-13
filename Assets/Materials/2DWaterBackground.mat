@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2DWaterMaterial
+  m_Name: 2DWaterBackground
   m_Shader: {fileID: -6465566751694194690, guid: adbafd4463b397647bcbbeae3a6df53b,
     type: 3}
   m_Parent: {fileID: 0}
@@ -49,6 +49,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
+    - _Alpha: 1
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
