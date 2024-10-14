@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class FishingInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject userInterfaceGraphic;
-    [SerializeField] private FishingSpotScriptableObject fishingSpot;
+    private FishingSpotScriptableObject fishingSpot;
     [SerializeField] private FishingSpotOutdoors fishingSpotOutdoors;
     private bool isActive = true;
 

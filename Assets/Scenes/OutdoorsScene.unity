@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1534.132, g: 1531.8029, b: 2134.0198, a: 1}
+  m_IndirectSpecularColor: {r: 1531.9044, g: 1506.9161, b: 2037.9885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8064,6 +8064,38 @@ MonoBehaviour:
   noiseScale: 42.3
   noiseOffset: {x: 0, y: 0}
   levels: {x: 0.5125786, y: 1}
+--- !u!1 &721138372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721138373}
+  m_Layer: 0
+  m_Name: FishingSchools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721138373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721138372}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1805185639}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &725865934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14942,7 +14974,6 @@ Transform:
   - {fileID: 1458832094}
   - {fileID: 1262498265}
   - {fileID: 1306148118}
-  - {fileID: 1805185639}
   - {fileID: 194358837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28269,7 +28300,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.015449274
+      value: 0.24266137
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28286,7 +28317,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1390252921}
+    m_TransformParent: {fileID: 721138373}
     m_Modifications:
     - target: {fileID: 623877110710735082, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -28321,17 +28352,17 @@ PrefabInstance:
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1565.95
+      value: 0.40283203
       objectReference: {fileID: 0}
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1773.2285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2145.56
+      value: 11.75
       objectReference: {fileID: 0}
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -28595,3 +28626,4 @@ SceneRoots:
   - {fileID: 1390252921}
   - {fileID: 883614362}
   - {fileID: 906528026}
+  - {fileID: 721138373}
