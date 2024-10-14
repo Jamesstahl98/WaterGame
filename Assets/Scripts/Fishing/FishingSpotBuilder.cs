@@ -7,14 +7,17 @@ public class FishingSpotBuilder : MonoBehaviour
 {
     [SerializeField] private GameObject fishPrefab;
 
+    private void Awake()
+    {
+        BuildFishingSpot(SceneSwapper.FishingSpot);
+    }
+
     public void BuildFishingSpot(FishingSpotScriptableObject fishingSpot)
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
         for (int i = 0; i < fishingSpot.fishes.Count; i++)
         {
             for (int j = 0; j < fishingSpot.fishesCount[i]; j++)
             {
-                Debug.Log("aaa");
                 Instantiate(fishPrefab);
             }
         }

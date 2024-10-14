@@ -22,6 +22,6 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        SceneSwapper.GoToFishingScene(fishingSpot, fishingSpotBuilderPrefabt);
+        SceneSwapper.GoToFishingScene(fishingSpot);
     }
 }

@@ -8,37 +8,13 @@ using UnityEngine.SceneManagement;
 
 public static class SceneSwapper
 {
-    private static FishingSpotScriptableObject FishingSpot;
-    private static GameObject FishingSpotBuilderPrefab;
+    public static FishingSpotScriptableObject FishingSpot;
+    //private static GameObject FishingSpotBuilderPrefab;
 
-    public static void GoToFishingScene(FishingSpotScriptableObject fishingSpot, GameObject fishingSpotBuilder)
+    public static void GoToFishingScene(FishingSpotScriptableObject fishingSpot)
     {
         FishingSpot = fishingSpot;
-        FishingSpotBuilderPrefab = fishingSpotBuilder;
-        LoadSceneAsync();
-    }
-
-    private static void LoadSceneAsync()
-    {
-        CoroutineRunner.StartRoutine(LoadSceneCoroutine());
-    }
-
-    private static IEnumerator LoadSceneCoroutine()
-    {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("FishingScene");
-
-        while (!asyncOperation.isDone)
-        {
-            yield return null;
-        }
-
-        ExecuteAfterSceneLoaded();
-    }
-
-    private static void ExecuteAfterSceneLoaded()
-    {
-        var fishingSpotBuilderObject = GameObject.Instantiate(FishingSpotBuilderPrefab);
-        fishingSpotBuilderObject.GetComponent<FishingSpotBuilder>().BuildFishingSpot(FishingSpot);
+        SceneManager.LoadScene("FishingScene");
     }
 
     public static void GoToBoatScene()
