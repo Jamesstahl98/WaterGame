@@ -120,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7451469792267328686}
   - component: {fileID: 3620638905858423130}
+  - component: {fileID: 623877110710735082}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: FishSchool
@@ -165,3 +166,17 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &623877110710735082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4990605784490109003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb3d6386295a00469e407236fa9b74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInterfaceGraphic: {fileID: 0}
+  fishingSpot: {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
