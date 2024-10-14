@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1531.9044, g: 1506.9161, b: 2037.9885, a: 1}
+  m_IndirectSpecularColor: {r: 1528.963, g: 1504.4298, b: 2036.7932, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8073,6 +8073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721138373}
+  - component: {fileID: 721138374}
   m_Layer: 0
   m_Name: FishingSchools
   m_TagString: Untagged
@@ -8096,6 +8097,18 @@ Transform:
   - {fileID: 1805185639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721138374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721138372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7713d8cc05c93e6499e231883d87be06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &725865934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28300,7 +28313,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24266137
+      value: -0.07339591
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28319,6 +28332,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 721138373}
     m_Modifications:
+    - target: {fileID: 623877110710735082, guid: adabe877ca07f4140b35e14e826419d4,
+        type: 3}
+      propertyPath: fishingSpotOutdoors
+      value: 
+      objectReference: {fileID: 11400000, guid: 63d0afc30f644fa4f8a5d60fc57ee127,
+        type: 2}
     - target: {fileID: 623877110710735082, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: userInterfaceGraphic
@@ -28399,8 +28418,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7334707681103599787, guid: adabe877ca07f4140b35e14e826419d4, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
