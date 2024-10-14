@@ -8,19 +8,34 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject userInterfaceGraphic;
     [SerializeField] private FishingSpotScriptableObject fishingSpot;
+    [SerializeField] private FishingSpotOutdoors fishingSpotOutdoors;
+    private bool isActive = true;
+
+    void Awake()
+    {
+        SetFishingSpot();
+    }
+
+    public void SetFishingSpot()
+    {
+        fishingSpot = fishingSpotOutdoors.PossibleFishingSpots[Random.Range(0, fishingSpotOutdoors.PossibleFishingSpots.Count + 1)];
+    }
 
     public void PlayerEnteredTrigger()
     {
-        userInterfaceGraphic.SetActive(true);
+        if(isActive)
+            userInterfaceGraphic.SetActive(true);
     }
 
     public void PlayerLeftTrigger()
     {
-        userInterfaceGraphic.SetActive(false);
+        if (isActive)
+            userInterfaceGraphic.SetActive(false);
     }
 
     public void Interact()
     {
-        SceneSwapper.GoToFishingScene(fishingSpot);
+        if (isActive)
+            SceneSwapper.GoToFishingScene(fishingSpot);
     }
 }

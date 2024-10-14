@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public static class SceneSwapper
 {
     public static FishingSpotScriptableObject FishingSpot;
+    public static Dictionary<FishingSpotOutdoors, bool> IsFishingSpotFishable;
 
     public static void GoToFishingScene(FishingSpotScriptableObject fishingSpot)
     {
