@@ -18,7 +18,8 @@ public class FishingSpotBuilder : MonoBehaviour
         {
             for (int j = 0; j < fishingSpot.fishesCount[i]; j++)
             {
-                Instantiate(fishPrefab);
+                var fish = Instantiate(fishPrefab).GetComponent<FishController>();
+                fish.Init(fishingSpot.fishes[i]);
             }
         }
     }
