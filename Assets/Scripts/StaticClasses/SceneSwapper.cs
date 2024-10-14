@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public static class SceneSwapper
 {
     public static FishingSpotScriptableObject FishingSpot;
-    //private static GameObject FishingSpotBuilderPrefab;
 
     public static void GoToFishingScene(FishingSpotScriptableObject fishingSpot)
     {
@@ -19,6 +18,7 @@ public static class SceneSwapper
 
     public static void GoToBoatScene()
     {
-
+        SceneManager.LoadScene("OutdoorsScene");
+        Debug.Log(PlayerInventory.ItemsInInventory.Count);
     }
 }

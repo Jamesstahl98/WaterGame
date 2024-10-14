@@ -8,7 +8,6 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject userInterfaceGraphic;
     [SerializeField] private FishingSpotScriptableObject fishingSpot;
-    [SerializeField] private GameObject fishingSpotBuilderPrefabt;
 
     public void PlayerEnteredTrigger()
     {

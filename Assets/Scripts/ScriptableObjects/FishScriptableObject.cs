@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Fish", menuName = "ScriptableObjects/FishScriptableObject")]
 
-public class FishScriptableObject : ScriptableObject
+public class FishScriptableObject : ScriptableObject, IPickupable
 {
     public Sprite sprite;
 

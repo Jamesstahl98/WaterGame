@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9ada44f384fcc498a084c66ec59efd, type: 3}
   m_Name: FishTest
   m_EditorClassIdentifier: 
-  sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 7482667652216324306, guid: a0c405cb9905d60448bd979d26b463dc, type: 3}
   fishName: TestFish1
   price: 10
   speed: 2
