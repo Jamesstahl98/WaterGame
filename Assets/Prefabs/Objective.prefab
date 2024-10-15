@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8785683337354354571}
   - component: {fileID: 5687107525344017367}
   - component: {fileID: 3948519719658347478}
+  - component: {fileID: 8785497443502394534}
+  - component: {fileID: 2339349089196647633}
   m_Layer: 0
   m_Name: Objective
   m_TagString: Untagged
@@ -86,6 +88,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8785497443502394534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680470350624770362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb3d6386295a00469e407236fa9b74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInterfaceGraphic: {fileID: 0}
+  fishingSpotOutdoors: {fileID: 11400000, guid: 63d0afc30f644fa4f8a5d60fc57ee127,
+    type: 2}
+--- !u!136 &2339349089196647633
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680470350624770362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &4990605784490109003
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,5 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInterfaceGraphic: {fileID: 0}
-  fishingSpot: {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
   fishingSpotOutdoors: {fileID: 0}

@@ -22,10 +22,10 @@ public class SunManager : MonoBehaviour
         lightData.EnableColorTemperature(true);
     }
 
-    private void Update()
+    public void UpdateSun(float time)
     {
-        float intensityCurve = sunIntensityCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
-        float temperatureCurve = sunTemperatureCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
+        float intensityCurve = sunIntensityCurve.Evaluate(time / 24f);
+        float temperatureCurve = sunTemperatureCurve.Evaluate(time / 24f);
 
         lightData.SetIntensity(intensityCurve * sunIntensity);
         light.colorTemperature = temperatureCurve * sunTemperature;
