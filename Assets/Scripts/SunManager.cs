@@ -19,13 +19,19 @@ public class SunManager : MonoBehaviour
         light = GetComponent<Light>();
         lightData = GetComponent<HDAdditionalLightData>();
         dayNightCycle = GameObject.Find("TimeManager").GetComponent<DayNightCycle>();
+        dayNightCycle.TimeHandlerDelegate += UpdateSun;
         lightData.EnableColorTemperature(true);
     }
 
-    public void UpdateSun(float time)
+    private void OnDestroy()
     {
-        float intensityCurve = sunIntensityCurve.Evaluate(time / 24f);
-        float temperatureCurve = sunTemperatureCurve.Evaluate(time / 24f);
+        dayNightCycle.TimeHandlerDelegate -= UpdateSun;
+    }
+
+    private void UpdateSun()
+    {
+        float intensityCurve = sunIntensityCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
+        float temperatureCurve = sunTemperatureCurve.Evaluate(dayNightCycle.CurrentTime / 24f);
 
         lightData.SetIntensity(intensityCurve * sunIntensity);
         light.colorTemperature = temperatureCurve * sunTemperature;

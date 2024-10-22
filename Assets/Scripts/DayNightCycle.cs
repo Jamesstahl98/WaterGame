@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DayNightCycle : MonoBehaviour
 {
     [SerializeField] private float timeModifier = 1f;
     [SerializeField] private float startTime = 8f;
-    [SerializeField] private SunManager sunManager;
     [SerializeField] private FishingSchools fishingSchoolsParent;
 
     private bool isEvening;
+
+    public delegate void TimeDelegate();
+    public TimeDelegate TimeHandlerDelegate;
 
     [HideInInspector] public Stopwatch Stopwatch = new Stopwatch();
 
@@ -27,10 +30,11 @@ public class DayNightCycle : MonoBehaviour
 
     private void Update()
     {
-        if(sunManager != null)
+        if(SceneManager.GetSceneByName("OutdoorsScene").isLoaded)
         {
-            sunManager.UpdateSun(CurrentTime);
+            TimeHandlerDelegate.Invoke();
         }
+
         if (CurrentTime >= 20)
         {
             isEvening = true;

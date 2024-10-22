@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DayNightCycle;
 
 public class ClockPointer : MonoBehaviour
 {
@@ -8,19 +9,20 @@ public class ClockPointer : MonoBehaviour
     private DayNightCycle dayNightCycle;
     private RectTransform rectTransform;
 
-    private void Awake()
+    private void Start()
     {
         dayNightCycle = GameObject.Find("TimeManager").GetComponent<DayNightCycle>();
         rectTransform = GetComponent<RectTransform>();
+        dayNightCycle.TimeHandlerDelegate += UpdateRotation;
     }
 
-    private void Update()
+    private void OnDestroy()
     {
-        UpdateRotation();
+        dayNightCycle.TimeHandlerDelegate -= UpdateRotation;
     }
 
     private void UpdateRotation()
     {
-        rectTransform.rotation = Quaternion.Euler(0, 0, isMinutePointer ? -dayNightCycle.CurrentTime * 360 : -dayNightCycle.CurrentTime * 15);
+        rectTransform.rotation = Quaternion.Euler(0, 0, isMinutePointer ? -dayNightCycle.CurrentTime * 360 : -dayNightCycle.CurrentTime * 30);
     }
 }
