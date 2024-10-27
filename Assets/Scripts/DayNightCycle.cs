@@ -30,10 +30,7 @@ public class DayNightCycle : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetSceneByName("OutdoorsScene").isLoaded)
-        {
-            TimeHandlerDelegate.Invoke();
-        }
+        TimeHandlerDelegate?.Invoke();
 
         if (CurrentTime >= 20)
         {
