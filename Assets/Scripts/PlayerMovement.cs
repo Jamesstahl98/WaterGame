@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Thrust")]
-    [SerializeField] private float maxSpeed;
     [SerializeField] private float minSpeed;
-    [SerializeField] private float maxThrust;
     [SerializeField] private float minThrust;
     [SerializeField] private float thrustTick;
     [SerializeField] private Slider thrustSlider;
+
+    private float maxThrust;
+    private float maxSpeed;
 
     [Header("Rotation")]
     [SerializeField] private float torqueTick;
@@ -21,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private Transform orientation;
     private Rigidbody rb;
 
-    private float verticalInput;
-    private float horizontalInput;
+    [HideInInspector]public float VerticalInput;
+    [HideInInspector]public float HorizontalInput;
     private float currentThrust = 0;
     private float currentTorque = 0;
 
@@ -30,13 +31,14 @@ public class PlayerMovement : MonoBehaviour
     {
         orientation = transform.Find("Orientation");
         rb = GetComponent<Rigidbody>();
+        maxThrust = PlayerStats.MaxBoatThrust;
         thrustSlider.maxValue = maxThrust;
         thrustSlider.minValue = minThrust;
+        maxSpeed = PlayerStats.MaxBoatSpeed;
     }
 
     void Update()
     {
-        GetInput();
         CapSpeed();
     }
 
@@ -46,20 +48,14 @@ public class PlayerMovement : MonoBehaviour
         RotatePlayer();
     }
 
-    private void GetInput()
-    {
-        verticalInput = Input.GetAxisRaw("Vertical");
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-    }
-
     private void MovePlayer()
     {
-        if (verticalInput == 1)
+        if (VerticalInput == 1)
         {
             if (currentThrust < maxThrust)
                 currentThrust += thrustTick;
         }
-        else if (verticalInput == -1)
+        else if (VerticalInput == -1)
         {
             if (currentThrust > minThrust)
                 currentThrust -= thrustTick;
@@ -72,12 +68,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotatePlayer()
     {
-        if (horizontalInput == 1)
+        if (HorizontalInput == 1)
         {
             if (currentTorque < maxTorque)
                 currentTorque += torqueTick;
         }
-        else if (horizontalInput == -1)
+        else if (HorizontalInput == -1)
         {
             if (currentTorque > -maxTorque)
                 currentTorque -= torqueTick;

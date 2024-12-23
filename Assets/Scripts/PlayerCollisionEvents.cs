@@ -24,14 +24,11 @@ public class PlayerCollisionEvents : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void Interact()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (currentInteractable != null)
         {
-            if(currentInteractable != null)
-            {
-                currentInteractable.Interact();
-            }
+            currentInteractable.Interact();
         }
     }
 }

@@ -238,9 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e56ee82cd8efe5498f51429833efed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
   minSpeed: -2
-  maxThrust: 15
   minThrust: -5
   thrustTick: 0.5
   thrustSlider: {fileID: 0}
@@ -256,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7933681411513039420}
   - component: {fileID: 3448010512631024740}
+  - component: {fileID: 4261136922896086206}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Player
@@ -301,3 +300,15 @@ CapsuleCollider:
   m_Height: 6.8425193
   m_Direction: 2
   m_Center: {x: 0, y: 0.3973053, z: -0.33596253}
+--- !u!114 &4261136922896086206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923190960395458789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dec73ad5da0844898200fb7ef27cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
