@@ -23,7 +23,19 @@ public class FishingHookColllision : MonoBehaviour
         {
             foreach(IPickupable item in caughtObjects)
             {
-                PlayerInventory.ItemsInInventory.Add(item);
+                if(PlayerInventory.ItemsInInventory.ContainsKey(item))
+                {
+                    PlayerInventory.ItemsInInventory[item]++;
+                }
+                else
+                {
+                    PlayerInventory.ItemsInInventory.Add(item, 1);
+                }
+
+                for(int i = 0; i < PlayerInventory.ItemsInInventory.Count; i++)
+                {
+                    UnityEngine.Debug.Log(PlayerInventory.ItemsInInventory[item]);
+                }
             }
             SceneSwapper.GoToBoatScene();
         }

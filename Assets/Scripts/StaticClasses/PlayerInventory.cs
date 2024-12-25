@@ -4,5 +4,5 @@ using UnityEngine;
 
 public static class PlayerInventory
 {
-    public static List<IPickupable> ItemsInInventory = new List<IPickupable>();
+    public static Dictionary<IPickupable, int> ItemsInInventory = new Dictionary<IPickupable, int>();
 }

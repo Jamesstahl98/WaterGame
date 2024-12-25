@@ -14,6 +14,7 @@ public static class SceneSwapper
     public static void GoToFishingScene(FishingSpotScriptableObject fishingSpot)
     {
         GameObject.Find("TimeManager").GetComponent<DayNightCycle>().Stopwatch.Stop();
+        UnityEngine.Debug.Log("Stop Time");
         FishingSpot = fishingSpot;
         SceneManager.LoadScene("FishingScene");
     }
@@ -22,5 +23,6 @@ public static class SceneSwapper
     {
         SceneManager.LoadScene("OutdoorsScene");
         GameObject.Find("TimeManager").GetComponent<DayNightCycle>().Stopwatch.Start();
+        UnityEngine.Debug.Log("Start Time");
     }
 }

@@ -24,7 +24,7 @@ public class FishingSchools : MonoBehaviour
 
     public void EnableFishingSpotsOnDayReset()
     {
-        foreach(GameObject item in fishingSpotList)
+        foreach (GameObject item in fishingSpotList)
         {
             item.GetComponent<FishingInteractable>().fishingSpotOutdoors.IsFishable = true;
             item.SetActive(true);

@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private Transform orientation;
     private Rigidbody rb;
 
-    private float verticalInput;
-    private float horizontalInput;
+    public float VerticalInput;
+    public float HorizontalInput;
     private float currentThrust = 0;
     private float currentTorque = 0;
 
@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        GetInput();
         CapSpeed();
     }
 
@@ -46,20 +45,14 @@ public class PlayerMovement : MonoBehaviour
         RotatePlayer();
     }
 
-    private void GetInput()
-    {
-        verticalInput = Input.GetAxisRaw("Vertical");
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-    }
-
     private void MovePlayer()
     {
-        if (verticalInput == 1)
+        if (VerticalInput == 1)
         {
             if (currentThrust < maxThrust)
                 currentThrust += thrustTick;
         }
-        else if (verticalInput == -1)
+        else if (VerticalInput == -1)
         {
             if (currentThrust > minThrust)
                 currentThrust -= thrustTick;
@@ -72,12 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotatePlayer()
     {
-        if (horizontalInput == 1)
+        if (HorizontalInput == 1)
         {
             if (currentTorque < maxTorque)
                 currentTorque += torqueTick;
         }
-        else if (horizontalInput == -1)
+        else if (HorizontalInput == -1)
         {
             if (currentTorque > -maxTorque)
                 currentTorque -= torqueTick;

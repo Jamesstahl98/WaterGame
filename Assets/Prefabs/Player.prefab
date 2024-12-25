@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 386287204261096218}
   - component: {fileID: 4878193881531217565}
   - component: {fileID: 3020891143501412449}
+  - component: {fileID: 3002033351329494980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -246,6 +247,20 @@ MonoBehaviour:
   thrustSlider: {fileID: 0}
   torqueTick: 0.01
   maxTorque: 1
+  VerticalInput: 0
+  HorizontalInput: 0
+--- !u!114 &3002033351329494980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736023787250951202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd21e5fe77a6a0e4dbd16518f2d17458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3923190960395458789
 GameObject:
   m_ObjectHideFlags: 0
