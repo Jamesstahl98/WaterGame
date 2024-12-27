@@ -14,4 +14,8 @@ public class FishScriptableObject : ScriptableObject, IPickupable
     public float speed;
     public float minDepth;
     public float maxDepth;
+
+    public Sprite GetSprite() => sprite;
+    public string GetFishName() => fishName;
+    public int GetPrice() => price;
 }

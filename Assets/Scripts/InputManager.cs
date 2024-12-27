@@ -6,13 +6,12 @@ public class InputManager : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private PlayerCollisionEvents playerCollisionEvents;
-    private GameObject InventoryCanvas;
+    [SerializeField] private GameObject InventoryObject;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerCollisionEvents = GetComponentInChildren<PlayerCollisionEvents>();
-        InventoryCanvas = GameObject.Find("InventoryCanvas");
     }
 
     void Update()
@@ -37,7 +36,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            InventoryCanvas.SetActive(!InventoryCanvas.activeSelf);
+            InventoryObject.SetActive(!InventoryObject.activeSelf);
         }
     }
 }

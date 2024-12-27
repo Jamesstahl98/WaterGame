@@ -4,5 +4,7 @@ using UnityEngine;
 
 public interface IPickupable
 {
-
+    Sprite GetSprite();
+    string GetFishName();
+    int GetPrice();
 }

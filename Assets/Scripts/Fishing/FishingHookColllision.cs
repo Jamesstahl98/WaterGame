@@ -31,11 +31,6 @@ public class FishingHookColllision : MonoBehaviour
                 {
                     PlayerInventory.ItemsInInventory.Add(item, 1);
                 }
-
-                for(int i = 0; i < PlayerInventory.ItemsInInventory.Count; i++)
-                {
-                    UnityEngine.Debug.Log(PlayerInventory.ItemsInInventory[item]);
-                }
             }
             SceneSwapper.GoToBoatScene();
         }
