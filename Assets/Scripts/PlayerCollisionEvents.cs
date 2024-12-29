@@ -10,8 +10,8 @@ public class PlayerCollisionEvents : MonoBehaviour
     {
         if (other.tag == "Interactable")
         {
-            other.gameObject.GetComponent<FishingInteractable>().PlayerEnteredTrigger();
-            currentInteractable = other.gameObject.GetComponent<FishingInteractable>();
+            currentInteractable = other.gameObject.GetComponent<IInteractable>();
+            currentInteractable.PlayerEnteredTrigger();
         }
     }
 
@@ -19,7 +19,7 @@ public class PlayerCollisionEvents : MonoBehaviour
     {
         if (other.tag == "Interactable")
         {
-            other.gameObject.GetComponent<FishingInteractable>().PlayerLeftTrigger();
+            other.gameObject.GetComponent<IInteractable>().PlayerLeftTrigger();
             currentInteractable = null;
         }
     }

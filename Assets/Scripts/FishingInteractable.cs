@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class FishingInteractable : MonoBehaviour, IInteractable
@@ -23,6 +24,7 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 
     public void PlayerEnteredTrigger()
     {
+        userInterfaceGraphic.GetComponentInChildren<TextMeshProUGUI>().text = "Press E to fish";
         userInterfaceGraphic.SetActive(true);
     }
 
