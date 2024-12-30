@@ -12,9 +12,12 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform itemsParent;
     [SerializeField] private TMPro.TextMeshProUGUI moneyText;
+    [SerializeField] private Button sellButton;
 
     private Dictionary<IPickupable, int> items;
     private List<GameObject> itemObjects = new List<GameObject>();
+    private IPickupable selectedItem;
+    private GameObject selectedItemObject;
 
     public bool IsOpenInShop = false;
 
@@ -29,19 +32,31 @@ public class InventoryController : MonoBehaviour
             item.transform.Find("Icon").GetComponent<Image>().sprite = entry.Key.GetSprite();
             item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = entry.Key.GetName();
             itemObjects.Add(item);
-            item.GetComponent<Button>().onClick.AddListener(() => { SellItem(entry, item); });
+            item.GetComponent<Button>().onClick.AddListener(() => { SelectItem(entry, item); });
         }
+
+        sellButton.onClick.AddListener(SellItem);
         moneyText.text = PlayerInventory.Money.ToString();
         gameObject.SetActive(false);
     }
 
-    public void SellItem(KeyValuePair<IPickupable, int> item, GameObject itemObject)
+    public void SellItem()
     {
-        if (items[item.Key] <= 0 || !IsOpenInShop) { return; }
+        if (items[selectedItem] <= 0 || !IsOpenInShop) { return; }
 
-        PlayerInventory.Money += (item.Key as FishScriptableObject).price;
-        items[item.Key]--;
-        itemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item.Key].ToString();
+        PlayerInventory.Money += (selectedItem as FishScriptableObject).price;
+        items[selectedItem]--;
+        selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
         moneyText.text = PlayerInventory.Money.ToString();
+    }
+
+    public void SelectItem(KeyValuePair<IPickupable, int> item, GameObject itemObject)
+    {
+        if(selectedItemObject != null)
+            selectedItemObject.GetComponent<Image>().color = Color.white;
+
+        selectedItem = item.Key;
+        selectedItemObject = itemObject;
+        selectedItemObject.GetComponent<Image>().color = Color.green;
     }
 }
