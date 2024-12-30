@@ -11,7 +11,8 @@ public class InventoryController : MonoBehaviour
 {
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform itemsParent;
-    
+    [SerializeField] private TMPro.TextMeshProUGUI moneyText;
+
     private Dictionary<IPickupable, int> items;
     private List<GameObject> itemObjects = new List<GameObject>();
 
@@ -30,6 +31,7 @@ public class InventoryController : MonoBehaviour
             itemObjects.Add(item);
             item.GetComponent<Button>().onClick.AddListener(() => { SellItem(entry, item); });
         }
+        moneyText.text = PlayerInventory.Money.ToString();
         gameObject.SetActive(false);
     }
 
@@ -40,5 +42,6 @@ public class InventoryController : MonoBehaviour
         PlayerInventory.Money += (item.Key as FishScriptableObject).price;
         items[item.Key]--;
         itemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item.Key].ToString();
+        moneyText.text = PlayerInventory.Money.ToString();
     }
 }

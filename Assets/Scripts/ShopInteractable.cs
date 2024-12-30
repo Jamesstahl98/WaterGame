@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShopInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject userInterfaceGraphic;
-    [SerializeField] private GameObject Inventory;
+    [SerializeField] private GameObject inventory;
 
     public void PlayerEnteredTrigger()
     {
@@ -17,12 +17,12 @@ public class ShopInteractable : MonoBehaviour, IInteractable
     public void PlayerLeftTrigger()
     {
         userInterfaceGraphic.SetActive(false);
-        Inventory.GetComponent<InventoryController>().IsOpenInShop = false;
+        inventory.GetComponent<InventoryController>().IsOpenInShop = false;
     }
 
     public void Interact()
     {
-        Inventory.SetActive(!Inventory.activeSelf);
-        Inventory.GetComponent<InventoryController>().IsOpenInShop = true;
+        inventory.SetActive(!inventory.activeSelf);
+        inventory.GetComponent<InventoryController>().IsOpenInShop = true;
     }
 }
