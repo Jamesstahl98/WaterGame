@@ -27,7 +27,7 @@ public class InventoryController : MonoBehaviour
             var item = Instantiate(itemPrefab, itemsParent);
             item.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = entry.Value.ToString();
             item.transform.Find("Icon").GetComponent<Image>().sprite = entry.Key.GetSprite();
-            item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = entry.Key.GetFishName();
+            item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = entry.Key.GetName();
             itemObjects.Add(item);
             item.GetComponent<Button>().onClick.AddListener(() => { SellItem(entry, item); });
         }

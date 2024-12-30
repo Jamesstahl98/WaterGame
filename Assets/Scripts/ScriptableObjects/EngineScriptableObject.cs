@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Fish", menuName = "ScriptableObjects/FishScriptableObject")]
-
-public class FishScriptableObject : ScriptableObject, IPickupable
+[CreateAssetMenu(fileName = "Engine", menuName = "ScriptableObjects/EngineScriptableObject")]
+public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
 {
     public Sprite sprite;
 
@@ -21,4 +20,9 @@ public class FishScriptableObject : ScriptableObject, IPickupable
     public float GetSpeed() => speed;
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
+
+    public void Consume()
+    {
+        Debug.Log("Engine consumed");
+    }
 }

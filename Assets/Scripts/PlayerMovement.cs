@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Thrust")]
-    [SerializeField] private float maxSpeed;
+    private float maxSpeed;
+    private float maxThrust;
     [SerializeField] private float minSpeed;
-    [SerializeField] private float maxThrust;
     [SerializeField] private float minThrust;
     [SerializeField] private float thrustTick;
     [SerializeField] private Slider thrustSlider;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        UpdateStats();
         orientation = transform.Find("Orientation");
         rb = GetComponent<Rigidbody>();
         thrustSlider.maxValue = maxThrust;
@@ -93,5 +94,11 @@ public class PlayerMovement : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * maxSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
+    }
+
+    public void UpdateStats()
+    {
+        maxSpeed = PlayerStats.MaxSpeed;
+        maxThrust = PlayerStats.MaxThrust;
     }
 }

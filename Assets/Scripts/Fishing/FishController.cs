@@ -14,16 +14,16 @@ public class FishController : MonoBehaviour
     private bool movingToPoint1 = true;
     private bool caught = false;
 
-    public void Init(FishScriptableObject fish)
+    public void Init(IPickupable fish)
     {
         ScriptableObject = fish;
         sr = GetComponent<SpriteRenderer>();
-        Name = fish.name;
+        Name = fish.GetName();
 
-        sr.sprite = fish.sprite;
-        speed = fish.speed;
+        sr.sprite = fish.GetSprite();
+        speed = fish.GetSpeed();
 
-        transform.position = new Vector2(0, Random.Range(-fish.minDepth, -fish.maxDepth));
+        transform.position = new Vector2(0, Random.Range(-fish.GetMinDepth(), -fish.GetMaxDepth()));
 
         patrolPoints.Item1 = new Vector2(Random.Range(-20f, 20f), transform.position.y);
         patrolPoints.Item2 = new Vector2(Random.Range(-20f, 20f), transform.position.y);
