@@ -14,6 +14,10 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float minDepth;
     public float maxDepth;
 
+    [Header("Upgrade stats")]
+    public float maxSpeedUpgradeAmount;
+    public float maxThrustUpgradeAmount;
+
     public Sprite GetSprite() => sprite;
     public string GetName() => name;
     public int GetPrice() => price;
@@ -21,8 +25,16 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
 
-    public void Consume()
+    public bool Consume()
     {
         Debug.Log("Engine consumed");
+        if(maxSpeedUpgradeAmount > PlayerStats.MaxSpeed)
+        {
+            PlayerStats.MaxSpeed = maxSpeedUpgradeAmount;
+            PlayerStats.MaxThrust = maxThrustUpgradeAmount;
+            PlayerStats.UpgradeHandlerDelegate?.Invoke();
+            return true;
+        }
+        return false;
     }
 }

@@ -13,6 +13,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private Transform itemsParent;
     [SerializeField] private TMPro.TextMeshProUGUI moneyText;
     [SerializeField] private Button sellButton;
+    [SerializeField] private Button consumeButton;
 
     private Dictionary<IPickupable, int> items;
     private List<GameObject> itemObjects = new List<GameObject>();
@@ -35,12 +36,13 @@ public class InventoryController : MonoBehaviour
             item.GetComponent<Button>().onClick.AddListener(() => { SelectItem(entry, item); });
         }
 
-        sellButton.onClick.AddListener(SellItem);
+        sellButton.onClick.AddListener(SellSelectedItem);
+        consumeButton.onClick.AddListener(ConsumeSelectedItem);
         moneyText.text = PlayerInventory.Money.ToString();
         gameObject.SetActive(false);
     }
 
-    public void SellItem()
+    public void SellSelectedItem()
     {
         if (items[selectedItem] <= 0 || !IsOpenInShop) { return; }
 
@@ -53,10 +55,22 @@ public class InventoryController : MonoBehaviour
     public void SelectItem(KeyValuePair<IPickupable, int> item, GameObject itemObject)
     {
         if(selectedItemObject != null)
-            selectedItemObject.GetComponent<Image>().color = Color.white;
+            selectedItemObject.GetComponent<Image>().color = Color.gray;
 
         selectedItem = item.Key;
         selectedItemObject = itemObject;
         selectedItemObject.GetComponent<Image>().color = Color.green;
+    }
+
+    public void ConsumeSelectedItem()
+    {
+        if (items[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
+        
+        var b = (selectedItem as IConsumable).Consume();
+        if(b) items[selectedItem]--;
+        else
+        {
+            Debug.Log("Cannot consume item");
+        }
     }
 }

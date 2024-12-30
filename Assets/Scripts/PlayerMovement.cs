@@ -28,10 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        PlayerStats.UpgradeHandlerDelegate += UpdateStats;
         UpdateStats();
         orientation = transform.Find("Orientation");
         rb = GetComponent<Rigidbody>();
-        thrustSlider.maxValue = maxThrust;
         thrustSlider.minValue = minThrust;
     }
 
@@ -98,7 +98,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateStats()
     {
+        UnityEngine.Debug.Log("Updating stats");
         maxSpeed = PlayerStats.MaxSpeed;
         maxThrust = PlayerStats.MaxThrust;
+        thrustSlider.maxValue = maxThrust;
     }
 }

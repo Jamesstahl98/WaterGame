@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IConsumable
 {
-    public abstract void Consume();
+    public abstract bool Consume();
 }
