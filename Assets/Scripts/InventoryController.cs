@@ -49,7 +49,16 @@ public class InventoryController : MonoBehaviour
 
         PlayerInventory.Money += (selectedItem as FishScriptableObject).price;
         items[selectedItem]--;
-        selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+
+        if (items[selectedItem] <= 0)
+        {
+            items.Remove(selectedItem);
+            Destroy(selectedItemObject);
+        }
+        else
+        {
+            selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+        }
         moneyText.text = PlayerInventory.Money.ToString();
     }
 
@@ -66,12 +75,19 @@ public class InventoryController : MonoBehaviour
     public void ConsumeSelectedItem()
     {
         if (selectedItem == null || items[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
-        
         var b = (selectedItem as IConsumable).Consume();
         if (b)
         {
             items[selectedItem]--;
-            selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+            if (items[selectedItem] <= 0)
+            {
+                items.Remove(selectedItem);
+                Destroy(selectedItemObject);
+            }
+            else
+            {
+                selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+            }
         }
         else
         {
