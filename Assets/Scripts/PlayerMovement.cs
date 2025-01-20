@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float torqueTick;
     [SerializeField] private float maxTorque;
 
-    private Transform orientation;
     private Rigidbody rb;
 
     public float VerticalInput;
@@ -30,9 +29,10 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerStats.UpgradeHandlerDelegate += UpdateStats;
         UpdateStats();
-        orientation = transform.Find("Orientation");
         rb = GetComponent<Rigidbody>();
         thrustSlider.minValue = minThrust;
+        transform.position = PlayerStats.PlayerPosition;
+        Physics.SyncTransforms();
     }
 
     void Update()

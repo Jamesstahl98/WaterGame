@@ -239,9 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e56ee82cd8efe5498f51429833efed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
   minSpeed: -2
-  maxThrust: 15
   minThrust: -5
   thrustTick: 0.5
   thrustSlider: {fileID: 0}
@@ -261,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd21e5fe77a6a0e4dbd16518f2d17458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryObject: {fileID: 0}
 --- !u!1 &3923190960395458789
 GameObject:
   m_ObjectHideFlags: 0

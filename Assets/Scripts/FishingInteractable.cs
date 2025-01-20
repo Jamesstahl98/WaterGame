@@ -36,6 +36,7 @@ public class FishingInteractable : MonoBehaviour, IInteractable
     public void Interact()
     {
         fishingSpotOutdoors.IsFishable = false;
+        PlayerStats.PlayerPosition = transform.position;
         SceneSwapper.GoToFishingScene(fishingSpot);
     }
 }
