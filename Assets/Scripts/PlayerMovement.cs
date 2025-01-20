@@ -98,7 +98,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateStats()
     {
-        UnityEngine.Debug.Log("Updating stats");
         maxSpeed = PlayerStats.MaxSpeed;
         maxThrust = PlayerStats.MaxThrust;
         thrustSlider.maxValue = maxThrust;

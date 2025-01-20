@@ -27,7 +27,6 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
 
     public bool Consume()
     {
-        Debug.Log("Engine consumed");
         if(maxSpeedUpgradeAmount > PlayerStats.MaxSpeed)
         {
             PlayerStats.MaxSpeed = maxSpeedUpgradeAmount;

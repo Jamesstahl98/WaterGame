@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using TMPro;
@@ -44,7 +45,7 @@ public class InventoryController : MonoBehaviour
 
     public void SellSelectedItem()
     {
-        if (items[selectedItem] <= 0 || !IsOpenInShop) { return; }
+        if (selectedItem == null || items[selectedItem] <= 0 || !IsOpenInShop) { return; }
 
         PlayerInventory.Money += (selectedItem as FishScriptableObject).price;
         items[selectedItem]--;
@@ -64,10 +65,14 @@ public class InventoryController : MonoBehaviour
 
     public void ConsumeSelectedItem()
     {
-        if (items[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
+        if (selectedItem == null || items[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
         
         var b = (selectedItem as IConsumable).Consume();
-        if(b) items[selectedItem]--;
+        if (b)
+        {
+            items[selectedItem]--;
+            selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+        }
         else
         {
             Debug.Log("Cannot consume item");

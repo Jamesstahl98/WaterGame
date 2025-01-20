@@ -18,5 +18,5 @@ MonoBehaviour:
   speed: 0
   minDepth: 10
   maxDepth: 12
-  maxSpeedUpgradeAmount: 100
-  maxThrustUpgradeAmount: 150
+  maxSpeedUpgradeAmount: 15
+  maxThrustUpgradeAmount: 20
