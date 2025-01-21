@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private float currentThrust = 0;
     private float currentTorque = 0;
 
+    private bool stopMovement;
+
     void Awake()
     {
         PlayerStats.UpgradeHandlerDelegate += UpdateStats;
@@ -44,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
         RotatePlayer();
+    }
+
+    public void StopMovement(bool b)
+    {
+        stopMovement = b;
     }
 
     private void MovePlayer()
