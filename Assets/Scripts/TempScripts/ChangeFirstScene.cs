@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeFirstScene : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
         SceneSwapper.GoToBoatScene();
     }

@@ -15,5 +15,5 @@ public static class PlayerStats
     public static float FishingDepth = 80f;
     public static int FishCount = 1;
 
-    public static Vector3 PlayerPosition = new Vector3(10, 0, 0);
+    public static Vector3 PlayerPosition = new Vector3(0, 0, -69.8f);
 }

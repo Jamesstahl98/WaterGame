@@ -7,6 +7,7 @@ public class ShopInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject userInterfaceGraphic;
     [SerializeField] private GameObject inventory;
+    [SerializeField] private List<ScriptableObject> shopInventory;
 
     public void PlayerEnteredTrigger()
     {
@@ -18,11 +19,13 @@ public class ShopInteractable : MonoBehaviour, IInteractable
     {
         userInterfaceGraphic.SetActive(false);
         inventory.GetComponent<InventoryController>().IsOpenInShop = false;
+        inventory.GetComponent<InventoryController>().UpdateShopInventory();
     }
 
     public void Interact()
     {
         inventory.SetActive(!inventory.activeSelf);
         inventory.GetComponent<InventoryController>().IsOpenInShop = true;
+        inventory.GetComponent<InventoryController>().UpdateShopInventory(shopInventory);
     }
 }
