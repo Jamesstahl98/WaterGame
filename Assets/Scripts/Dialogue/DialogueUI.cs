@@ -174,7 +174,7 @@ namespace HeneGames.DialogueSystem
             if (currentDialogueManager == null)
                 return 0;
 
-            return currentDialogueManager.CurrentSentenceLenght();
+            return currentDialogueManager.CurrentSentenceLength();
         }
 
         IEnumerator WriteTextToTextmesh(string _text, TextMeshProUGUI _textMeshObject)

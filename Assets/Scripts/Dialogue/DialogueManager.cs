@@ -7,6 +7,9 @@ namespace HeneGames.DialogueSystem
 {
     public class DialogueManager : MonoBehaviour
     {
+        [SerializeField] private QuestScriptableObject quest;
+        [SerializeField] private InventoryController inventoryController;
+
         private int currentSentence;
         private float coolDownTimer;
         private bool dialogueIsOn;
@@ -28,7 +31,7 @@ namespace HeneGames.DialogueSystem
 
         [Header("Dialogue")]
         [SerializeField] private TriggerState triggerState;
-        [SerializeField] private List<NPC_Centence> sentences = new List<NPC_Centence>();
+        [SerializeField] public List<NPC_Sentence> Sentences = new List<NPC_Sentence>();
 
         private void Update()
         {
@@ -41,6 +44,11 @@ namespace HeneGames.DialogueSystem
             //Start dialogue by input
             if (Input.GetKeyDown(DialogueUI.instance.actionInput) && dialogueTrigger != null && !dialogueIsOn)
             {
+                Sentences = quest.GetNPCSentences();
+                if(Sentences == quest.completeSentences)
+                {
+                    Sentences[Sentences.Count - 1].sentenceEvent.AddListener(AddQuestRewards);
+                }
                 //Trigger event inside DialogueTrigger component
                 if (dialogueTrigger != null)
                 {
@@ -182,10 +190,10 @@ namespace HeneGames.DialogueSystem
             ShowCurrentSentence();
 
             //Play dialogue sound
-            PlaySound(sentences[currentSentence].sentenceSound);
+            PlaySound(Sentences[currentSentence].sentenceSound);
 
             //Cooldown timer
-            coolDownTimer = sentences[currentSentence].skipDelayTime;
+            coolDownTimer = Sentences[currentSentence].skipDelayTime;
         }
 
         public void NextSentence(out bool lastSentence)
@@ -209,7 +217,7 @@ namespace HeneGames.DialogueSystem
             nextSentenceDialogueEvent.Invoke();
 
             //If last sentence stop dialogue and return
-            if (currentSentence > sentences.Count - 1)
+            if (currentSentence > Sentences.Count - 1)
             {
                 StopDialogue();
 
@@ -224,13 +232,13 @@ namespace HeneGames.DialogueSystem
             lastSentence = false;
 
             //Play dialogue sound
-            PlaySound(sentences[currentSentence].sentenceSound);
+            PlaySound(Sentences[currentSentence].sentenceSound);
 
             //Show next sentence in dialogue UI
             ShowCurrentSentence();
 
             //Cooldown timer
-            coolDownTimer = sentences[currentSentence].skipDelayTime;
+            coolDownTimer = Sentences[currentSentence].skipDelayTime;
         }
 
         public void StopDialogue()
@@ -270,13 +278,13 @@ namespace HeneGames.DialogueSystem
 
         private void ShowCurrentSentence()
         {
-            if (sentences[currentSentence].dialogueCharacter != null)
+            if (Sentences[currentSentence].dialogueCharacter != null)
             {
                 //Show sentence on the screen
-                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(Sentences[currentSentence].dialogueCharacter, Sentences[currentSentence].sentence);
 
                 //Invoke sentence event
-                sentences[currentSentence].sentenceEvent.Invoke();
+                Sentences[currentSentence].sentenceEvent.Invoke();
             }
             else
             {
@@ -284,24 +292,33 @@ namespace HeneGames.DialogueSystem
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(_dialogueCharacter, Sentences[currentSentence].sentence);
 
                 //Invoke sentence event
-                sentences[currentSentence].sentenceEvent.Invoke();
+                Sentences[currentSentence].sentenceEvent.Invoke();
             }
         }
 
-        public int CurrentSentenceLenght()
+        public int CurrentSentenceLength()
         {
-            if(sentences.Count <= 0)
+            if(Sentences.Count <= 0)
                 return 0;
 
-            return sentences[currentSentence].sentence.Length;
+            return Sentences[currentSentence].sentence.Length;
+        }
+
+        public void AddQuestRewards()
+        {
+            foreach (IPickupable item in quest.RewardItems)
+            {
+                inventoryController.AddItemToInventory(item);
+            }
+            inventoryController.UpdateMoney(quest.RewardMoney);
         }
     }
 
     [System.Serializable]
-    public class NPC_Centence
+    public class NPC_Sentence
     {
         [Header("------------------------------------------------------------")]
 

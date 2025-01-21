@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: d8e30cae0bd41134c8b444b76733eeb7, type: 3}
   name: Tier Three Engine
   sellPrice: 45
-  buyPrice: 70
+  buyPrice: 1
   speed: 0
   minDepth: 10
   maxDepth: 12

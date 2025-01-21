@@ -52,38 +52,25 @@ public class InventoryController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void Test()
+    {
+        Debug.Log("Test");
+    }
+
     private void BuySelectedItem()
     {
         if (selectedShopItem == null || PlayerInventory.Money < selectedShopItem.GetBuyPrice()) { return; }
 
-        PlayerInventory.Money -= selectedShopItem.GetBuyPrice();
-        
-        //PlayerInventory.ItemsInInventory.Add(selectedShopItem, 1);
+        UpdateMoney(-selectedShopItem.GetBuyPrice());
 
-        moneyText.text = PlayerInventory.Money.ToString();
-        
-        if(items.ContainsKey(selectedShopItem))
-        {
-            items[selectedShopItem]++;
-            selectedShopItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedShopItem].ToString();
-        }
-        else
-        {
-            items.Add(selectedShopItem, 1);
-            var item = Instantiate(itemPrefab, itemsParent);
-            item.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedShopItem].ToString();
-            item.transform.Find("Icon").GetComponent<Image>().sprite = selectedShopItem.GetSprite();
-            item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = selectedShopItem.GetName();
-            itemObjects.Add(item);
-            item.GetComponent<Button>().onClick.AddListener(() => { SelectItem(new KeyValuePair<IPickupable, int>(selectedShopItem, items[selectedShopItem]), item); });
-        }
+        AddItemToInventory(selectedShopItem);
     }
 
     public void SellSelectedItem()
     {
         if (selectedItem == null || items[selectedItem] <= 0 || !IsOpenInShop) { return; }
 
-        PlayerInventory.Money += selectedItem.GetSellPrice();
+        UpdateMoney(selectedItem.GetSellPrice());
         items[selectedItem]--;
 
         if (items[selectedItem] <= 0)
@@ -95,8 +82,34 @@ public class InventoryController : MonoBehaviour
         {
             selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
         }
-        moneyText.text = PlayerInventory.Money.ToString();
+
         selectedItem = null;
+    }
+
+    public void AddItemToInventory(IPickupable item)
+    {
+        Debug.Log("Add item");
+        if (items.ContainsKey(item))
+        {
+            items[item]++;
+            selectedShopItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
+        }
+        else
+        {
+            items.Add(item, 1);
+            var newItemObject = Instantiate(itemPrefab, itemsParent);
+            newItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
+            newItemObject.transform.Find("Icon").GetComponent<Image>().sprite = item.GetSprite();
+            newItemObject.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = item.GetName();
+            itemObjects.Add(newItemObject);
+            newItemObject.GetComponent<Button>().onClick.AddListener(() => { SelectItem(new KeyValuePair<IPickupable, int>(item, items[item]), newItemObject); });
+        }
+    }
+
+    public void UpdateMoney(int moneyChange)
+    {
+        PlayerInventory.Money += moneyChange;
+        moneyText.text = PlayerInventory.Money.ToString();
     }
 
     public void SelectItem(KeyValuePair<IPickupable, int> item, GameObject itemObject)
