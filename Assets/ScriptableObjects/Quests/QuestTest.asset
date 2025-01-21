@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: NameTest
   questDescription: DescriptionTest
   RewardMoney: 10
-  RewardItem:
+  RewardItems:
   - {fileID: 11400000, guid: 62e58500a9a62e34c9c9e8e6c456c400, type: 2}
   questType: 0
   item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}

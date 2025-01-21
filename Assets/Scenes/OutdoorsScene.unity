@@ -13992,26 +13992,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1269252668}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1271217613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1707208570774453371, guid: 976e82a8817aef145ba7596305ee8af6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1049018158874113177}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1271217614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271217613}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ac3585335c8094ebc7fff77c63d464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Quest: {fileID: 11400000, guid: fc3069ccc85ce084ab51cfa0f9b8bc32, type: 2}
-  dialogueManager: {fileID: 1049018158874113178}
 --- !u!1001 &1272140064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29837,24 +29817,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1707208570774453371, guid: 976e82a8817aef145ba7596305ee8af6,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1271217614}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 976e82a8817aef145ba7596305ee8af6, type: 3}
---- !u!114 &1049018158874113178 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1049018158874113177}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1349921369918425538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29956,7 +29920,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19339073
+      value: 0.18861893
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
