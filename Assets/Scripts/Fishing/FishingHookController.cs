@@ -18,6 +18,8 @@ public class FishingHookController : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float deceleration;
 
+    [SerializeField] private GameObject AscendEarlyUI;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,7 +31,7 @@ public class FishingHookController : MonoBehaviour
         if(hookDescending)
         {
             MoveTowardsYPosition(fishingDepthTarget);
-            return;
+
         }
         GetInput();
         CapSpeed();
@@ -48,14 +50,25 @@ public class FishingHookController : MonoBehaviour
 
         if(transform.position.y <= targetPos.y)
         {
-            GetComponent<FishingHookColllision>().enabled = true;
-            hookDescending = false;
+            StopDescent();
         }
     }
 
     private void GetInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if(Input.GetKeyDown(KeyCode.Space) && hookDescending)
+        {
+            StopDescent();
+        }
+    }
+
+    private void StopDescent()
+    {
+        GetComponent<FishingHookColllision>().enabled = true;
+        hookDescending = false;
+        AscendEarlyUI.SetActive(false);
     }
 
     private void CapSpeed()
