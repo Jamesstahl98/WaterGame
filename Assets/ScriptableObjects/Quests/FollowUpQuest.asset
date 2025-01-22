@@ -17,7 +17,7 @@ MonoBehaviour:
   questDescription: DescriptionTest
   RewardMoney: 10
   RewardItems:
-  - {fileID: 11400000, guid: 62e58500a9a62e34c9c9e8e6c456c400, type: 2}
+  - {fileID: 11400000, guid: 2664103327d0d224dbb451d92a5e0a80, type: 2}
   questType: 0
   item: {fileID: 11400000, guid: 647bde423c3d0b1459b57da2a00c703e, type: 2}
   collectAmount: 1

@@ -56,6 +56,7 @@ public class QuestScriptableObject : ScriptableObject
         if (questType == QuestType.Collect)
         {
             if (!PlayerInventory.ItemsInInventory.ContainsKey(item as IPickupable)) { return false; }
+
             if (PlayerInventory.ItemsInInventory[item as IPickupable] >= collectAmount)
             {
                 isComplete = true;
