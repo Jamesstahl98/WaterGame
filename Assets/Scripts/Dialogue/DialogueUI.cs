@@ -42,6 +42,7 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private TextMeshProUGUI messageText;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private GameObject interactionUI;
+        [SerializeField] private Image targetUI;
 
         [Header("Settings")]
         [SerializeField] private bool animateText = true;
@@ -124,7 +125,7 @@ namespace HeneGames.DialogueSystem
             currentDialogueManager.StartDialogue();
         }
 
-        public void ShowSentence(DialogueCharacter _dialogueCharacter, string _message)
+        public void ShowSentence(DialogueCharacter _dialogueCharacter, NPC_Sentence sentence)
         {
             StopAllCoroutines();
 
@@ -132,18 +133,26 @@ namespace HeneGames.DialogueSystem
 
             portrait.sprite = _dialogueCharacter.characterPhoto;
             nameText.text = _dialogueCharacter.characterName;
-            currentMessage = _message;
+            currentMessage = sentence.sentence;
 
             if (animateText)
             {
-                StartCoroutine(WriteTextToTextmesh(_message, messageText));
+                StartCoroutine(WriteTextToTextmesh(sentence.sentence, messageText));
             }
             else
             {
-                messageText.text = _message;
+                messageText.text = sentence.sentence;
+            }
+            if (sentence.targetSprite != null)
+            {
+                targetUI.sprite = sentence.targetSprite;
+                targetUI.gameObject.SetActive(true);
+            }
+            else
+            {
+                targetUI.gameObject.SetActive(false);
             }
         }
-
         public void ClearText()
         {
             dialogueWindow.SetActive(false);

@@ -31,7 +31,6 @@ public class FishingHookController : MonoBehaviour
         if(hookDescending)
         {
             MoveTowardsYPosition(fishingDepthTarget);
-
         }
         GetInput();
         CapSpeed();

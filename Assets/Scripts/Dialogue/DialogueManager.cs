@@ -294,7 +294,7 @@ namespace HeneGames.DialogueSystem
             if (Sentences[currentSentence].dialogueCharacter != null)
             {
                 //Show sentence on the screen
-                DialogueUI.instance.ShowSentence(Sentences[currentSentence].dialogueCharacter, Sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(Sentences[currentSentence].dialogueCharacter, Sentences[currentSentence]);
 
                 //Invoke sentence event
                 Sentences[currentSentence].sentenceEvent.Invoke();
@@ -305,7 +305,7 @@ namespace HeneGames.DialogueSystem
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, Sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(_dialogueCharacter, Sentences[currentSentence]);
 
                 //Invoke sentence event
                 Sentences[currentSentence].sentenceEvent.Invoke();
@@ -347,6 +347,8 @@ namespace HeneGames.DialogueSystem
         [Header("------------------------------------------------------------")]
 
         public DialogueCharacter dialogueCharacter;
+
+        public Sprite targetSprite;
 
         [TextArea(3, 10)]
         public string sentence;

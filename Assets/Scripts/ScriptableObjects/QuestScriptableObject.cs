@@ -26,9 +26,9 @@ public class QuestScriptableObject : ScriptableObject
     public int collectAmount;
 
     public bool isComplete;
-    [SerializeField] public List<NPC_Sentence> pickUpSentences = new List<NPC_Sentence>();
-    [SerializeField] public List<NPC_Sentence> notCompleteSentences = new List<NPC_Sentence>();
-    [SerializeField] public List<NPC_Sentence> completeSentences = new List<NPC_Sentence>();
+    public List<NPC_Sentence> pickUpSentences = new List<NPC_Sentence>();
+    public List<NPC_Sentence> notCompleteSentences = new List<NPC_Sentence>();
+    public List<NPC_Sentence> completeSentences = new List<NPC_Sentence>();
 
     public void StartQuest()
     {

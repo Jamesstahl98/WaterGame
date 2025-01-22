@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1529.4357, g: 1505.7286, b: 2040.6526, a: 1}
+  m_IndirectSpecularColor: {r: 1529.2433, g: 1504.3263, b: 2035.5393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13642,6 +13642,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 378971079778168617, guid: 66a0aba2ba55058439c92574558222ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2338859298468319739, guid: 66a0aba2ba55058439c92574558222ac,
         type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -29943,7 +29948,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2703039
+      value: 0.047717046
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
