@@ -88,7 +88,6 @@ public class InventoryController : MonoBehaviour
 
     public void AddItemToInventory(IPickupable item)
     {
-        Debug.Log("Add item");
         if (items.ContainsKey(item))
         {
             items[item]++;

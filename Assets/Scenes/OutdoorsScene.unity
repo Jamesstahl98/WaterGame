@@ -29712,9 +29712,32 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
+      propertyPath: quests.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
       propertyPath: inventoryController
       value: 
       objectReference: {fileID: 2121750431}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fc3069ccc85ce084ab51cfa0f9b8bc32,
+        type: 2}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c75eaf59a27d6bb4ba088414a3f7a048,
+        type: 2}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: de6714ab440c08b4f97769f314989f41,
+        type: 2}
     - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
       propertyPath: sentences.Array.size
@@ -29920,7 +29943,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18861893
+      value: 0.2703039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

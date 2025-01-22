@@ -33,25 +33,20 @@ public class QuestScriptableObject : ScriptableObject
     public void StartQuest()
     {
         if (Quests.ActiveQuests.Contains(this) || Quests.CompletedQuests.Contains(this)) { return; }
-        Debug.Log("Added quest");
         Quests.ActiveQuests.Add(this);
     }
 
     public void TryCompleteQuest()
     {
-        Debug.Log("TryComplete");
         if (!Quests.ActiveQuests.Contains(this)) { return; }
-        Debug.Log("After exit gate");
         if (ReturnCompleteStatus())
         {
-            Debug.Log("Status = complete");
             CompleteQuest();
         }
     }
 
     private void CompleteQuest()
     {
-        Debug.Log("Completed quest");
         Quests.ActiveQuests.Remove(this);
         Quests.CompletedQuests.Add(this);
     }

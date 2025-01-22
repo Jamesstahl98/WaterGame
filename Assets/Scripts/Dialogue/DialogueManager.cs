@@ -7,9 +7,10 @@ namespace HeneGames.DialogueSystem
 {
     public class DialogueManager : MonoBehaviour
     {
-        [SerializeField] private QuestScriptableObject quest;
+        [SerializeField] private List<QuestScriptableObject> quests;
         [SerializeField] private InventoryController inventoryController;
 
+        private QuestScriptableObject quest;
         private int currentSentence;
         private float coolDownTimer;
         private bool dialogueIsOn;
@@ -33,6 +34,18 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private TriggerState triggerState;
         [SerializeField] public List<NPC_Sentence> Sentences = new List<NPC_Sentence>();
 
+        private void Awake()
+        {
+            foreach (var quest in quests)
+            {
+                if (!Quests.CompletedQuests.Contains(quest))
+                {
+                    this.quest = quest;
+                    break;
+                }
+            }
+        }
+
         private void Update()
         {
             //Timer
@@ -47,7 +60,7 @@ namespace HeneGames.DialogueSystem
                 Sentences = quest.GetNPCSentences();
                 if(Sentences == quest.completeSentences)
                 {
-                    Sentences[Sentences.Count - 1].sentenceEvent.AddListener(AddQuestRewards);
+                    Sentences[Sentences.Count - 1].sentenceEvent.AddListener(CompleteQuest);
                 }
                 //Trigger event inside DialogueTrigger component
                 if (dialogueTrigger != null)
@@ -307,13 +320,24 @@ namespace HeneGames.DialogueSystem
             return Sentences[currentSentence].sentence.Length;
         }
 
-        public void AddQuestRewards()
+        public void CompleteQuest()
         {
             foreach (IPickupable item in quest.RewardItems)
             {
                 inventoryController.AddItemToInventory(item);
             }
             inventoryController.UpdateMoney(quest.RewardMoney);
+            if (quests.IndexOf(quest) + 1 < quests.Count)
+            {
+                Debug.Log("Follow up quest found");
+                quest = quests[quests.IndexOf(quest) + 1];
+            }
+            else
+            {
+                Debug.Log($"{quests.IndexOf(quest)} quests.Count: {quests.Count}");
+                Debug.Log("Follow up quest not found");
+                quest = null;
+            }
         }
     }
 
