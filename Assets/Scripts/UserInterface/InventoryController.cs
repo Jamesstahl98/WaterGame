@@ -86,7 +86,7 @@ public class InventoryController : MonoBehaviour
         if (items.ContainsKey(item))
         {
             items[item]++;
-            selectedShopItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
+            itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text == item.GetName()).transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
         }
         else
         {
@@ -100,6 +100,18 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    public void CheckForEmptyItemSlots()
+    {
+        foreach (var item in items)
+        {
+            if (item.Value <= 0)
+            {
+                Destroy(itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text == item.Key.GetName()));
+                items.Remove(item.Key);
+                return;
+            }
+        }
+    }
     public void UpdateMoney(int moneyChange)
     {
         PlayerInventory.Money += moneyChange;
@@ -172,5 +184,10 @@ public class InventoryController : MonoBehaviour
             item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = entry.GetName();
             item.GetComponent<Button>().onClick.AddListener(() => { SelectItemInShop(entry, item); });
         }
+    }
+
+    internal void RemoveItem(IPickupable item, int amount)
+    {
+        items[item] -= amount;
     }
 }

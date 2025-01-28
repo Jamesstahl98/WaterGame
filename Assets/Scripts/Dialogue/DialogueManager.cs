@@ -326,6 +326,11 @@ namespace HeneGames.DialogueSystem
             {
                 inventoryController.AddItemToInventory(item);
             }
+            for(int i = 0; i < quest.collectAmount; i++)
+            {
+                inventoryController.RemoveItem(quest.item as IPickupable, quest.collectAmount);
+                inventoryController.CheckForEmptyItemSlots();
+            }
             inventoryController.UpdateMoney(quest.RewardMoney);
             if (quests.IndexOf(quest) + 1 < quests.Count)
             {
