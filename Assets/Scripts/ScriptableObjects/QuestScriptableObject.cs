@@ -70,17 +70,14 @@ public class QuestScriptableObject : ScriptableObject
     {
         if (Quests.ActiveQuests.Contains(this))
         {
-            Debug.Log("Pick up sentences");
             return notCompleteSentences;
         }
         else if (Quests.CompletedQuests.Contains(this))
         {
-            Debug.Log("Complete sentences");
             return completeSentences;
         }
         else
         {
-            Debug.Log("Not complete sentences");
             return pickUpSentences;
         }
     }

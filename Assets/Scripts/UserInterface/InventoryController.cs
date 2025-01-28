@@ -52,11 +52,6 @@ public class InventoryController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Test()
-    {
-        Debug.Log("Test");
-    }
-
     private void BuySelectedItem()
     {
         if (selectedShopItem == null || PlayerInventory.Money < selectedShopItem.GetBuyPrice()) { return; }

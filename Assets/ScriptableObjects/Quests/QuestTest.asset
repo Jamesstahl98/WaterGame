@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 1
   questName: NameTest
-  questDescription: DescriptionTest
+  questDescription: Collect one FishTest
   RewardMoney: 10
   RewardItems:
   - {fileID: 11400000, guid: 26a24252be545914b993aef9c4dc5d16, type: 2}

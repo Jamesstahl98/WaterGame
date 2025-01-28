@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerCollisionEvents playerCollisionEvents;
     [SerializeField] private GameObject InventoryObject;
+    [SerializeField] private GameObject QuestLogObject;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class InputManager : MonoBehaviour
         MovementInput();
         InteractInput();
         InventoryInput();
+        QuestLogInput();
     }
     private void MovementInput()
     {
@@ -37,6 +39,15 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             InventoryObject.SetActive(!InventoryObject.activeSelf);
+        }
+    }
+
+    private void QuestLogInput()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            QuestLogObject.SetActive(!QuestLogObject.activeSelf);
+            QuestLogObject.GetComponent<QuestLog>().RefreshQuestLog();
         }
     }
 }
