@@ -541,9 +541,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
-  m_Color: {r: 1, g: 0.19339621, b: 0.29310474, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f2c20dcb29ba6fa448d2dba5e85f6ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -563,7 +562,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -622,9 +621,17 @@ MonoBehaviour:
   descendSpeed: 10
   ascendSpeed: 10
   maxSpeed: 4
-  maxAscendSpeed: 0
+  maxAscendSpeed: 10
   acceleration: 2
   deceleration: 0.2
+  baseTorque: 3
+  torqueModifier: 0.01
+  baseTorqueReduction: 1
+  torqueReductionModifier: 0.1
+  torqueReductionCap: 3
+  maxRotation: 60
+  torqueReductionFallOffModifier: 7
+  zRotationDifferenceThreshold: 0.5
   AscendEarlyUI: {fileID: 1848657896}
 --- !u!1 &916508096
 GameObject:
