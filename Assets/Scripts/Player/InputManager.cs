@@ -8,11 +8,13 @@ public class InputManager : MonoBehaviour
     private PlayerCollisionEvents playerCollisionEvents;
     [SerializeField] private GameObject InventoryObject;
     [SerializeField] private GameObject QuestLogObject;
+    [SerializeField] private CameraCustomScript cameraCustomScript;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerCollisionEvents = GetComponentInChildren<PlayerCollisionEvents>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             InventoryObject.SetActive(!InventoryObject.activeSelf);
+            cameraCustomScript.ChangeAxisControl(!InventoryObject.activeSelf && !QuestLogObject.activeSelf);
         }
     }
 
@@ -48,6 +51,7 @@ public class InputManager : MonoBehaviour
         {
             QuestLogObject.SetActive(!QuestLogObject.activeSelf);
             QuestLogObject.GetComponent<QuestLog>().RefreshQuestLog();
+            cameraCustomScript.ChangeAxisControl(!QuestLogObject.activeSelf && !InventoryObject.activeSelf);
         }
     }
 }
