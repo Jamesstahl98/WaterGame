@@ -14,6 +14,7 @@ public class FishingInteractable : MonoBehaviour, IInteractable
 
     void Awake()
     {
+        fishingSpotOutdoors.Position = transform.position;
         SetFishingSpot();
     }
 
