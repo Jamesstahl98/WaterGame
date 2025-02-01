@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1530.1749, g: 1505.0001, b: 2036.383, a: 1}
+  m_IndirectSpecularColor: {r: 1534.6232, g: 1518.6798, b: 2077.4065, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3356,6 +3356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 184837729}
+  - component: {fileID: 184837730}
   m_Layer: 0
   m_Name: SeaBasicFishingSchools
   m_TagString: Untagged
@@ -3399,6 +3400,18 @@ Transform:
   - {fileID: 889112459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184837730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184837728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7713d8cc05c93e6499e231883d87be06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &185022474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34691,7 +34704,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15717368
+      value: -0.007768709
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

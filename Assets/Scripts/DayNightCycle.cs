@@ -38,7 +38,8 @@ public class DayNightCycle : MonoBehaviour
         }
         if(CurrentTime < 20 && isEvening)
         {
-            GameObject.Find("FishingSchools").GetComponent<FishingSchools>().EnableFishingSpotsOnDayReset();
+            GameObject.Find("CoastalBasicFishingSchools").GetComponent<FishingSchools>().EnableFishingSpotsOnDayReset();
+            GameObject.Find("SeaBasicFishingSchools").GetComponent<FishingSchools>().EnableFishingSpotsOnDayReset();
             isEvening = false;
         }
     }
