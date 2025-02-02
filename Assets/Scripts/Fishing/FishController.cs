@@ -23,10 +23,12 @@ public class FishController : MonoBehaviour
         sr.sprite = fish.GetSprite();
         speed = fish.GetSpeed();
 
-        transform.position = new Vector2(Random.Range(-20f, 20f), Random.Range(-fish.GetMinDepth(), -fish.GetMaxDepth()));
+        float patrolY = Random.Range(-fish.GetMinDepth(), -fish.GetMaxDepth());
 
-        patrolPoints.Item1 = new Vector2(Random.Range(0, 20f), transform.position.y);
-        patrolPoints.Item2 = new Vector2(Random.Range(-20f, 0), transform.position.y);
+        patrolPoints.Item1 = new Vector2(Random.Range(0, 20f), patrolY);
+        patrolPoints.Item2 = new Vector2(Random.Range(-20f, 0), patrolY);
+
+        transform.position = new Vector2(Random.Range(patrolPoints.Item1.x, patrolPoints.Item2.x), patrolY);
 
         Vector2 S = sr.sprite.bounds.size;
         GetComponent<BoxCollider2D>().size = S;
