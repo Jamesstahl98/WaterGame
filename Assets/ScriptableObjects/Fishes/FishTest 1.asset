@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FishTest 1
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 392b012963041c44cbde2a038c674ade, type: 3}
-  name: 
+  name: Fish test 1
+  description: Fish test 1 description
   sellPrice: 10
   buyPrice: 15
   speed: 2

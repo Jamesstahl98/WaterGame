@@ -18,6 +18,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI moneyText;
     [SerializeField] private Button sellButton;
     [SerializeField] private Button consumeButton;
+    [SerializeField] private GameObject itemDescriptionObject;
+    [SerializeField] private Color itemBackgroundColor;
     private Dictionary<IPickupable, int> items;
     private IPickupable selectedItem;
     private GameObject selectedItemObject;
@@ -72,6 +74,7 @@ public class InventoryController : MonoBehaviour
         {
             items.Remove(selectedItem);
             Destroy(selectedItemObject);
+            DeselectItem();
         }
         else
         {
@@ -132,11 +135,25 @@ public class InventoryController : MonoBehaviour
     public void SelectItem(KeyValuePair<IPickupable, int> item, GameObject itemObject)
     {
         if(selectedItemObject != null)
-            selectedItemObject.GetComponent<Image>().color = Color.gray;
+            selectedItemObject.GetComponent<Image>().color = itemBackgroundColor;
 
         selectedItem = item.Key;
         selectedItemObject = itemObject;
         selectedItemObject.GetComponent<Image>().color = Color.green;
+        itemDescriptionObject.SetActive(true);
+        itemDescriptionObject.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = item.Key.GetName();
+        itemDescriptionObject.transform.Find("ItemDescription").GetComponent<TextMeshProUGUI>().text = item.Key.GetDescription();
+    }
+
+    public void DeselectItem()
+    {
+        if(selectedItemObject != null)
+        {
+            selectedItemObject.GetComponent<Image>().color = itemBackgroundColor;
+        }
+        selectedItem = null;
+        selectedItemObject = null;
+        itemDescriptionObject.SetActive(false);
     }
 
     public void SelectItemInShop(IPickupable item, GameObject itemObject)
@@ -160,6 +177,7 @@ public class InventoryController : MonoBehaviour
             {
                 items.Remove(selectedItem);
                 Destroy(selectedItemObject);
+                DeselectItem();
             }
             else
             {

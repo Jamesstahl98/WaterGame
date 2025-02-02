@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour
         {
             InventoryObject.SetActive(!InventoryObject.activeSelf);
             cameraCustomScript.ChangeAxisControl(!InventoryObject.activeSelf && !QuestLogObject.activeSelf);
+            InventoryObject.GetComponent<InventoryController>().DeselectItem();
         }
     }
 

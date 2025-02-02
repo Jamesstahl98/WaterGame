@@ -6,6 +6,7 @@ public interface IPickupable
 {
     Sprite GetSprite();
     string GetName();
+    string GetDescription();
     int GetSellPrice();
     int GetBuyPrice();
     float GetSpeed();

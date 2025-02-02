@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descendSpeed: 10
-  ascendSpeed: 0
+  ascendSpeed: 10
   maxSpeed: 4
   maxAscendSpeed: 10
   acceleration: 2

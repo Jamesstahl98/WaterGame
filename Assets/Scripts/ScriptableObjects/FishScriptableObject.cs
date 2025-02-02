@@ -10,6 +10,7 @@ public class FishScriptableObject : ScriptableObject, IPickupable
 
     [Header("Stats")]
     public string name;
+    public string description;
     public int sellPrice;
     public int buyPrice;
     public float speed;
@@ -18,6 +19,7 @@ public class FishScriptableObject : ScriptableObject, IPickupable
 
     public Sprite GetSprite() => sprite;
     public string GetName() => name;
+    public string GetDescription() => description;
     public int GetSellPrice() => sellPrice;
     public int GetBuyPrice() => buyPrice;
     public float GetSpeed() => speed;
