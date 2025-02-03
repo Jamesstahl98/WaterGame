@@ -9847,7 +9847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260.1, y: 46}
+  m_AnchoredPosition: {x: 256.6, y: 46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742059228
@@ -28399,7 +28399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d295894bf6ff04449bf609c046e1323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compassBarTransform: {fileID: 1709647387}
   northMarkerTransform: {fileID: 763047299}
   eastMarkerTransform: {fileID: 1577093235}
   southMarkerTransform: {fileID: 601319528}
@@ -34846,7 +34845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.5, y: -43}
+  m_AnchoredPosition: {x: -192, y: -43}
   m_SizeDelta: {x: 382.5131, y: 302.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121750431
@@ -35060,7 +35059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62.700043, y: -88.99998}
+  m_AnchoredPosition: {x: -64, y: -88.99998}
   m_SizeDelta: {x: 380, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138302003
@@ -35531,7 +35530,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03609129
+      value: -0.0074550547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
