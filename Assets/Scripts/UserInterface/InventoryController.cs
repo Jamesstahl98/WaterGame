@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using static UnityEngine.EventSystems.EventTrigger;
 
@@ -114,7 +116,7 @@ public class InventoryController : MonoBehaviour
                 itemsToRemove.Add(item.Key);
             }
         }
-
+        
         foreach (var item in itemsToRemove)
         {
             var itemObject = itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text == item.GetName());

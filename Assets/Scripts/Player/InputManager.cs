@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     private PlayerCollisionEvents playerCollisionEvents;
     [SerializeField] private GameObject InventoryObject;
     [SerializeField] private GameObject QuestLogObject;
+    [SerializeField] private GameObject UpgradeMenuObject;
     [SerializeField] private CameraCustomScript cameraCustomScript;
 
     void Start()
@@ -23,6 +24,7 @@ public class InputManager : MonoBehaviour
         InteractInput();
         InventoryInput();
         QuestLogInput();
+        UpgradeMenuInput();
     }
     private void MovementInput()
     {
@@ -53,6 +55,15 @@ public class InputManager : MonoBehaviour
             QuestLogObject.SetActive(!QuestLogObject.activeSelf);
             QuestLogObject.GetComponent<QuestLog>().RefreshQuestLog();
             cameraCustomScript.ChangeAxisControl(!QuestLogObject.activeSelf && !InventoryObject.activeSelf);
+        }
+    }
+
+    private void UpgradeMenuInput()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            UpgradeMenuObject.SetActive(!UpgradeMenuObject.activeSelf);
+            cameraCustomScript.ChangeAxisControl(!UpgradeMenuObject.activeSelf);
         }
     }
 }
