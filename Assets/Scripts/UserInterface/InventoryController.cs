@@ -107,24 +107,19 @@ public class InventoryController : MonoBehaviour
 
     public void CheckForEmptyItemSlots()
     {
-        List<IPickupable> itemsToRemove = new List<IPickupable>();
+        List<IPickupable> itemsToRemove = items
+            .Where(item => item.Value <= 0)
+            .Select(item => item.Key)
+            .ToList();
 
-        foreach (var item in items)
-        {
-            if (item.Value <= 0)
-            {
-                itemsToRemove.Add(item.Key);
-            }
-        }
-        
         foreach (var item in itemsToRemove)
         {
-            var itemObject = itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text == item.GetName());
-            if(itemObject != null)
+            var itemObject = itemObjects.Find(x =>
+                x != null && x.transform.Find("ItemName")?.GetComponent<TextMeshProUGUI>()?.text == item.GetName());
+            if (itemObject != null)
             {
                 Destroy(itemObject);
             }
-
             items.Remove(item);
         }
     }
