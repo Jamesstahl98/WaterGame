@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f9ada44f384fcc498a084c66ec59efd, type: 3}
-  m_Name: FishTest 2
+  m_Name: Sea bass
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 999a2cb0749ca6e4ab05bc89066f500c, type: 3}
-  name: Fish Test
-  description: fish test description
-  sellPrice: 15
-  buyPrice: 20
-  speed: 2
+  sprite: {fileID: 21300000, guid: c03ceb519647ed84b9705b76d9297728, type: 3}
+  name: Sea bass
+  description: Great at keeping tempo.
+  sellPrice: 20
+  buyPrice: 40
+  speed: 3
   minDepth: 5
-  maxDepth: 50
+  maxDepth: 100
