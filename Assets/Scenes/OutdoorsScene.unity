@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1534.9386, g: 1526.1583, b: 2108.6956, a: 1}
+  m_IndirectSpecularColor: {r: 1535.3009, g: 1514.6857, b: 2058.3323, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -321,7 +321,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: f5d9b773cb5fb5044b6fc4d245417148,
+      objectReference: {fileID: 11400000, guid: da0121ae620daea48a58092617c63436,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -1462,7 +1462,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 101eca9eb1e341a4ab509ad86e01d3fd,
+      objectReference: {fileID: 11400000, guid: 3a2ace8274845b64c9c58347a1bd82cd,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -3009,7 +3009,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 40bda903203b5c14e98d494482bbbac2,
+      objectReference: {fileID: 11400000, guid: 7ef6ddde2a2c5c845b7d3c14fc7b2e6b,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -3206,7 +3206,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 9798fd2f7f92b7248b0a2e0377d60e77,
+      objectReference: {fileID: 11400000, guid: 9da0b14297d5e6f4d9dc182fe9080b55,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -3837,6 +3837,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
+        type: 3}
+      propertyPath: fishingSpotOutdoors
+      value: 
+      objectReference: {fileID: 11400000, guid: 35edcd10c50a94e43a732670fd46913a,
+        type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: userInterfaceGraphic
@@ -5334,7 +5340,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: a24ed53cb60ee4b42af8055a13bef478,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -7548,7 +7554,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: ee02b43886eacd049869ff0ec7b84d90,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -7953,7 +7959,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 7c9bca52109081649b3fba358db809b5,
+      objectReference: {fileID: 11400000, guid: 53fc3b102aa6bda418d3ddd2b4b46de9,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -9239,7 +9245,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: 4b9ae3ad7076bec4789d96d7ba72dca7,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -9479,7 +9485,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 089562db48e7b5c468b17a78cb5cfd24,
+      objectReference: {fileID: 11400000, guid: 05ed990eff2b2ac46810813b8b00df42,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -9849,6 +9855,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
+        type: 3}
+      propertyPath: fishingSpotOutdoors
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c38e68d6f91d2d479a4eb9fe53e9cc6,
+        type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: userInterfaceGraphic
@@ -11164,7 +11176,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: daed17d5ec9d37c4195a93c9acae9a82,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -11610,7 +11622,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: d1158456388dc4d4babf3578b7ef6f53,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -12554,6 +12566,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
+        type: 3}
+      propertyPath: fishingSpotOutdoors
+      value: 
+      objectReference: {fileID: 11400000, guid: dde965a1e2b2419489670c72940aa15b,
+        type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: userInterfaceGraphic
@@ -14092,7 +14110,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 6fd81df89ddc2fa4aad7e47a5136ba4c,
+      objectReference: {fileID: 11400000, guid: 0336a2c45b50817499dfcd2e1d7d3594,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -14679,7 +14697,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 57937468e09a005459c54ddcd6eefbe8,
+      objectReference: {fileID: 11400000, guid: 9ee7276adbd1d0d4bb7323e4d58d0043,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -15087,7 +15105,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: d7cf04092e1a98441b5a2ba8bcc512ba,
+      objectReference: {fileID: 11400000, guid: f76b7dca60677f848a73288380bb9108,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -15209,7 +15227,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 43abc69ac4bb74b4789c96e3c5fd3ce8,
+      objectReference: {fileID: 11400000, guid: f9a5aa4a59a91a742a2fb563a04d8bb8,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -15631,7 +15649,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: dee5358a14e495f4c9e7a0c1cdbae822,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -15759,7 +15777,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 86c2bba9505773b4caf413f123b8bec7,
+      objectReference: {fileID: 11400000, guid: 5e574587390fdc644b6b38165c040cf4,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -17562,7 +17580,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 1334fa8f4ce8de843975710d13c544c5,
+      objectReference: {fileID: 11400000, guid: ee75d7a5acd643247961f69464142709,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -17684,7 +17702,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: 41ab366d159c48b4bb6dfbe5fc8a9002,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -18386,7 +18404,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: d1cadf90b2192c5499e08a6a4b940f28,
+      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -19849,6 +19867,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
+      propertyPath: fishingSpotOutdoors
+      value: 
+      objectReference: {fileID: 11400000, guid: 272aa3481a38b994fba54a3b24b6d4ab,
+        type: 2}
+    - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
+        type: 3}
       propertyPath: userInterfaceGraphic
       value: 
       objectReference: {fileID: 1553987680}
@@ -20531,7 +20555,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: b5f1e27a6dffbe04ca140858c67b026c,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -20541,7 +20565,7 @@ PrefabInstance:
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -310
+      value: -423.3
       objectReference: {fileID: 0}
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -20551,7 +20575,7 @@ PrefabInstance:
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -292
+      value: -203.7
       objectReference: {fileID: 0}
     - target: {fileID: 8785683337354354571, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -21169,7 +21193,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: 108238fec075b7c4698bde4e15f685ee,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -23379,7 +23403,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: 5297f48eef9b88245a74e3b1512c09b9,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -29250,7 +29274,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: 441b754e9b6bf784f9dc513b8803d70c,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -31925,7 +31949,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 32ce03a99f3a681488e5c8344110b443,
+      objectReference: {fileID: 11400000, guid: 15ef025a35b10154e95182c155ea1aad,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -32053,7 +32077,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: 420ec03c7646f604090cb9de07d70604,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -32331,7 +32355,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 7b75ec49761a6c943850e58d88771344,
+      objectReference: {fileID: 11400000, guid: 0443ea700974bf7458e8d8c22d15d7a5,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -32690,7 +32714,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 742390eafcd98c941ad5e6abe24b2a61,
+      objectReference: {fileID: 11400000, guid: f707242fe90ab5d4aacc79e67a6fa713,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -34458,7 +34482,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 570096ae01af68e40864102501ef1110,
+      objectReference: {fileID: 11400000, guid: f8eb9dcd6a48ee044bbd64b9122b7978,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -35163,7 +35187,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fishingSpotOutdoors
       value: 
-      objectReference: {fileID: 11400000, guid: 41cafd249f756d548a961a4676e06b49,
+      objectReference: {fileID: 11400000, guid: b20c2c36932bd1e44acbd4713613bd25,
         type: 2}
     - target: {fileID: 8785497443502394534, guid: adabe877ca07f4140b35e14e826419d4,
         type: 3}
@@ -36873,7 +36897,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21827325
+      value: 0.08755684
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
