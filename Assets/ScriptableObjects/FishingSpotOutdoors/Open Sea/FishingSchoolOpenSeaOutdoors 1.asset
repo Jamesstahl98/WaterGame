@@ -16,5 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
   - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
   - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
-  Position: {x: 16.962513, y: 111.58495, z: 10.2}
+  Position: {x: 16.962513, y: 0, z: 10.2}
   IsFishable: 1

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FishingSchoolOutdoorsCoastal 8
   m_EditorClassIdentifier: 
   PossibleFishingSpots:
-  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
-  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
-  - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
+  - {fileID: 11400000, guid: 5083044bfe6632340a9f94739bde0dde, type: 2}
+  - {fileID: 11400000, guid: 5083044bfe6632340a9f94739bde0dde, type: 2}
+  - {fileID: 11400000, guid: cd81daae1c13f2c4bba2f482927a6c39, type: 2}
   Position: {x: -241.1, y: 0, z: -51.3}
   IsFishable: 1

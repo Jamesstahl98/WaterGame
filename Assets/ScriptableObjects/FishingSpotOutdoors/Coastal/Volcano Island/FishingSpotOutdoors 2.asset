@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9cb6f458b57014e8d2df5648ad2a8b, type: 3}
-  m_Name: FishingSchoolOpenSeaOutdoors 4
+  m_Name: FishingSpotOutdoors 2
   m_EditorClassIdentifier: 
-  PossibleFishingSpots:
-  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
-  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
-  - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
-  Position: {x: 477, y: 0, z: 175.5}
+  PossibleFishingSpots: []
+  Position: {x: -33, y: 0, z: 429}
   IsFishable: 1
