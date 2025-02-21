@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9cb6f458b57014e8d2df5648ad2a8b, type: 3}
   m_Name: FishingSpotOutdoors 11
   m_EditorClassIdentifier: 
-  PossibleFishingSpots: []
+  PossibleFishingSpots:
+  - {fileID: 11400000, guid: 5083044bfe6632340a9f94739bde0dde, type: 2}
   Position: {x: -348, y: 0, z: 72}
   IsFishable: 1
