@@ -40,20 +40,20 @@ public class FishingHookController : MonoBehaviour
 
     void Update()
     {
-        if (hookDescending)
-        {
-            MoveTowardsYPosition(fishingDepthTarget);
-        }
         GetInput();
-        CapSpeed();
     }
 
     private void FixedUpdate()
     {
-        if (hookDescending) return;
+        if (hookDescending)
+        {
+            MoveTowardsYPosition(fishingDepthTarget);
+            return;
+        }
         Movement();
         AddTorque();
         CapZRotation();
+        CapSpeed();
     }
 
     private void MoveTowardsYPosition(Vector2 targetPos)

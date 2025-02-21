@@ -8,13 +8,15 @@ public class FishingHookColllision : MonoBehaviour
     private int catchesLeft = PlayerStats.FishCount;
     private List<IPickupable> caughtObjects = new List<IPickupable>();
 
+    [SerializeField] private Transform fishParent;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "Fishable" && catchesLeft > 0)
         {
             if (!enabled) return;
-            collision.transform.position = transform.position;
-            collision.transform.parent = transform;
+            collision.transform.position = fishParent.position;
+            collision.transform.parent = fishParent;
             collision.GetComponent<FishController>().HookCollision();
             caughtObjects.Add(collision.GetComponent<FishController>().ScriptableObject);
             catchesLeft--;

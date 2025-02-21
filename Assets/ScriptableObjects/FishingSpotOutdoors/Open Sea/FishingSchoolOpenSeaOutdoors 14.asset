@@ -15,6 +15,13 @@ MonoBehaviour:
   PossibleFishingSpots:
   - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
   - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
+  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
+  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
+  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
+  - {fileID: 11400000, guid: ecc73974de62bf74ab5488266ff38ea1, type: 2}
   - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
+  - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
+  - {fileID: 11400000, guid: 6ec191d971144364994f03a5b4c9ea3d, type: 2}
+  - {fileID: 11400000, guid: 0648a8bddf41fb242a3e54f63b0cb334, type: 2}
   Position: {x: -423.3, y: 0, z: -203.7}
   IsFishable: 1

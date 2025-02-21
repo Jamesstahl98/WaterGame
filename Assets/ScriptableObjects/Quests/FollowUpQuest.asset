@@ -19,14 +19,16 @@ MonoBehaviour:
   RewardItems:
   - {fileID: 11400000, guid: 2664103327d0d224dbb451d92a5e0a80, type: 2}
   questType: 0
-  item: {fileID: 11400000, guid: 647bde423c3d0b1459b57da2a00c703e, type: 2}
+  item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
   collectAmount: 1
   isComplete: 0
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: Arr. matey! 2
+    sentence: 'Arr. matey!
+
+'
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -35,7 +37,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: Bring me one fish and I will give you something special. 2
+    sentence: Bring me one Herring and I will give you something special.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -56,8 +58,8 @@ MonoBehaviour:
   notCompleteSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
-    targetSprite: {fileID: 21300000, guid: 392b012963041c44cbde2a038c674ade, type: 3}
-    sentence: The fish looks like this. 2
+    targetSprite: {fileID: 21300000, guid: 4a1a0ebdfb0af9e4e99100bd70bc2944, type: 3}
+    sentence: The fish looks like this.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -79,7 +81,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: You did it! 2
+    sentence: You did it!
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -88,7 +90,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: Wahooo! 2
+    sentence: Wahooo!
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:

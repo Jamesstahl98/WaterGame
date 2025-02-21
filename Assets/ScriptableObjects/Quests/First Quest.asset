@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff0cbc52b008dd4fb964b1c3c05f323, type: 3}
-  m_Name: QuestTest
+  m_Name: First Quest
   m_EditorClassIdentifier: 
   questID: 1
-  questName: NameTest
-  questDescription: Collect one FishTest
+  questName: Collect Goby
+  questDescription: Fish one Goby. They can be fished in costal waters.
   RewardMoney: 10
   RewardItems:
   - {fileID: 11400000, guid: 26a24252be545914b993aef9c4dc5d16, type: 2}
   questType: 0
-  item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
+  item: {fileID: 11400000, guid: 30b0270369654f34f8ba7f10b8fc21a1, type: 2}
   collectAmount: 1
   isComplete: 0
   pickUpSentences:
@@ -56,7 +56,7 @@ MonoBehaviour:
   notCompleteSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
-    targetSprite: {fileID: 21300000, guid: 999a2cb0749ca6e4ab05bc89066f500c, type: 3}
+    targetSprite: {fileID: 21300000, guid: 975da5f2ae72a3e499f7ef335a6ac2c2, type: 3}
     sentence: The fish looks like this
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
-          m_MethodName: AddQuestRewards
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
