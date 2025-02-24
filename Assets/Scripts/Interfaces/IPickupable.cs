@@ -12,4 +12,5 @@ public interface IPickupable
     float GetSpeed();
     float GetMinDepth();
     float GetMaxDepth();
+    bool GetSellableStatus();
 }

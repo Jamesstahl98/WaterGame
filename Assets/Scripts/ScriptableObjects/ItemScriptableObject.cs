@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Engine", menuName = "ScriptableObjects/EngineScriptableObject")]
-public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
+[CreateAssetMenu(fileName = "Item", menuName = "ScriptableObjects/ItemScriptableObject")]
+
+public class ItemScriptableObject : ScriptableObject, IPickupable
 {
     public Sprite sprite;
 
@@ -17,10 +18,6 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float maxDepth;
     public bool isSellable;
 
-    [Header("Upgrade stats")]
-    public float maxSpeedUpgradeAmount;
-    public float maxThrustUpgradeAmount;
-
     public Sprite GetSprite() => sprite;
     public string GetName() => name;
     public string GetDescription() => description;
@@ -30,16 +27,4 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
     public bool GetSellableStatus() => isSellable;
-
-    public bool Consume()
-    {
-        if(maxSpeedUpgradeAmount > PlayerStats.MaxSpeed)
-        {
-            PlayerStats.MaxSpeed = maxSpeedUpgradeAmount;
-            PlayerStats.MaxThrust = maxThrustUpgradeAmount;
-            PlayerStats.UpgradeHandlerDelegate?.Invoke();
-            return true;
-        }
-        return false;
-    }
 }

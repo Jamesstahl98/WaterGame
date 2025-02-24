@@ -15,6 +15,7 @@ public class FishingLineScriptableObject : ScriptableObject, IPickupable, IConsu
     public float speed;
     public float minDepth;
     public float maxDepth;
+    public bool isSellable;
 
     [Header("Upgrade stats")]
     public float maxDepthUpgradeAmount;
@@ -27,6 +28,7 @@ public class FishingLineScriptableObject : ScriptableObject, IPickupable, IConsu
     public float GetSpeed() => speed;
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
+    public bool GetSellableStatus() => isSellable;
 
     public bool Consume()
     {
