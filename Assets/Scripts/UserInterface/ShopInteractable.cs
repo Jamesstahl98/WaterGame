@@ -8,6 +8,7 @@ public class ShopInteractable : MonoBehaviour, IInteractable
     [SerializeField] private GameObject userInterfaceGraphic;
     [SerializeField] private GameObject inventory;
     [SerializeField] private List<ScriptableObject> shopInventory;
+    [SerializeField] private CameraCustomScript cameraCustomScript;
 
     public void PlayerEnteredTrigger()
     {
@@ -27,5 +28,6 @@ public class ShopInteractable : MonoBehaviour, IInteractable
         inventory.SetActive(!inventory.activeSelf);
         inventory.GetComponent<InventoryController>().IsOpenInShop = true;
         inventory.GetComponent<InventoryController>().UpdateShopInventory(shopInventory);
+        cameraCustomScript.ChangeAxisControl(!inventory.activeSelf);
     }
 }

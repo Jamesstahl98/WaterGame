@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1531.006, g: 1505.879, b: 2037.262, a: 1}
+  m_IndirectSpecularColor: {r: 1534.6779, g: 1519.6036, b: 2081.8557, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14311,7 +14311,7 @@ PrefabInstance:
     - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
       propertyPath: quests.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
@@ -14323,6 +14323,12 @@ PrefabInstance:
       propertyPath: 'quests.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: fcb083688caea05498d085c5fa288441,
+        type: 2}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c82a59233d219e4d906cbc6a76649ec,
         type: 2}
     - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
@@ -30834,15 +30840,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.36862746}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -54235,6 +54241,11 @@ PrefabInstance:
       objectReference: {fileID: 2121750429}
     - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
         type: 3}
+      propertyPath: cameraCustomScript
+      value: 
+      objectReference: {fileID: 1147372378}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
       propertyPath: userInterfaceGraphic
       value: 
       objectReference: {fileID: 1553987680}
@@ -56497,6 +56508,7 @@ Transform:
   - {fileID: 1706807931}
   - {fileID: 1127815726}
   - {fileID: 561015040}
+  - {fileID: 2045715711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022453476
@@ -56906,6 +56918,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 477858, guid: 107cc8771223daf48be99527559937ff,
     type: 3}
   m_PrefabInstance: {fileID: 2044049420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2045715710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2020873648}
+    m_Modifications:
+    - target: {fileID: 3494608586933426949, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_Name
+      value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 2121750429}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: cameraCustomScript
+      value: 
+      objectReference: {fileID: 1147372378}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: userInterfaceGraphic
+      value: 
+      objectReference: {fileID: 1553987680}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: shopInventory.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: 'shopInventory.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e8ae79ee0547e9946b94e16ec6374f7f,
+        type: 2}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: 'shopInventory.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e8ae79ee0547e9946b94e16ec6374f7f,
+        type: 2}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.589966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41374207
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -275.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7331503
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6800667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 85.698
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da2974c3ffa660e4fbd9c63ed9f77fcc, type: 3}
+--- !u!4 &2045715711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7334822718084607206, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045715710}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2054183299
 PrefabInstance:
@@ -58939,7 +59057,7 @@ PrefabInstance:
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.339864
+      value: -3.1940196
       objectReference: {fileID: 0}
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
@@ -60051,7 +60169,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.102899656
+      value: 0.15997197
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60684,6 +60802,11 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2121750429}
+    - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
+        type: 3}
+      propertyPath: cameraCustomScript
+      value: 
+      objectReference: {fileID: 1147372378}
     - target: {fileID: 4947942159649127126, guid: da2974c3ffa660e4fbd9c63ed9f77fcc,
         type: 3}
       propertyPath: userInterfaceGraphic

@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff0cbc52b008dd4fb964b1c3c05f323, type: 3}
-  m_Name: QuestsAreComplete
+  m_Name: QuestsAreCompleteMrSpeed
   m_EditorClassIdentifier: 
   questID: 1
-  questName: QuestsAreCompleteStartIsland
+  questName: QuestsCompleteMrSpeed
   questDescription: DescriptionTest
   RewardMoney: 0
   RewardItems: []
   questType: 0
-  item: {fileID: 0}
-  collectAmount: 0
+  item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
+  collectAmount: 1
   isComplete: 0
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: Arr. matey!
+    sentence: Thanks a bunch.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -34,7 +34,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: I don't have any more quests for you.
+    sentence: Now I can make it home to my family
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
