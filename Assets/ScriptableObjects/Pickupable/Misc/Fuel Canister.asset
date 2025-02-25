@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Fuel Canister
   description: Fuel for a speed boat
   sellPrice: 0
-  buyPrice: 0
+  buyPrice: 150
   speed: 0
   minDepth: 0
   maxDepth: 0

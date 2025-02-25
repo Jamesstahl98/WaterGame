@@ -18,11 +18,11 @@ MonoBehaviour:
   RewardMoney: 0
   RewardItems: []
   questType: 0
-  item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
-  collectAmount: 1
+  item: {fileID: 0}
+  collectAmount: 0
   isComplete: 0
   pickUpSentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
+  - dialogueCharacter: {fileID: 11400000, guid: 2684a9af969d8c84bb5a8cfcb4742477,
       type: 2}
     targetSprite: {fileID: 0}
     sentence: Thanks a bunch.
@@ -31,7 +31,7 @@ MonoBehaviour:
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
-  - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
+  - dialogueCharacter: {fileID: 11400000, guid: 2684a9af969d8c84bb5a8cfcb4742477,
       type: 2}
     targetSprite: {fileID: 0}
     sentence: Now I can make it home to my family

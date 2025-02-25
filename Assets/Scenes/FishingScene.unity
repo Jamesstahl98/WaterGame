@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 897580565}
-  division: 1.5
+  division: 1
 --- !u!1 &1578209731
 GameObject:
   m_ObjectHideFlags: 0
