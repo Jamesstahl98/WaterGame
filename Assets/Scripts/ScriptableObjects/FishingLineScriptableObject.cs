@@ -34,6 +34,7 @@ public class FishingLineScriptableObject : ScriptableObject, IPickupable, IConsu
     {
         if (maxDepthUpgradeAmount > PlayerStats.MaxSpeed)
         {
+            PlayerStats.FishingLineTier = name;
             PlayerStats.FishingDepth = maxDepthUpgradeAmount;
             PlayerStats.UpgradeHandlerDelegate?.Invoke();
             return true;

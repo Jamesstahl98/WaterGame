@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 2
   questName: Collect Herring
-  questDescription: Collect one Herring
+  questDescription: Collect one Herring. They can be fished in the open sea.
   RewardMoney: 10
   RewardItems:
   - {fileID: 11400000, guid: 2664103327d0d224dbb451d92a5e0a80, type: 2}
+  isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: 431266cb684b13149b2dfb6ca604e916, type: 2}
   collectAmount: 1
-  isComplete: 0
+  isComplete: 1
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
       type: 2}

@@ -35,6 +35,7 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     {
         if(maxSpeedUpgradeAmount > PlayerStats.MaxSpeed)
         {
+            PlayerStats.EngineTier = name;
             PlayerStats.MaxSpeed = maxSpeedUpgradeAmount;
             PlayerStats.MaxThrust = maxThrustUpgradeAmount;
             PlayerStats.UpgradeHandlerDelegate?.Invoke();

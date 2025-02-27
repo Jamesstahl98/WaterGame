@@ -34,6 +34,7 @@ public class FishingHookScriptableObject : ScriptableObject, IPickupable, IConsu
     {
         if (maxFishesOnHookUpgradeAmount > PlayerStats.FishCount)
         {
+            PlayerStats.FishingHookTier = name;
             PlayerStats.FishCount = maxFishesOnHookUpgradeAmount;
             PlayerStats.UpgradeHandlerDelegate?.Invoke();
             return true;
