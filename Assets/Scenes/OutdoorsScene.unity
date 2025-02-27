@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1531.34, g: 1506.2443, b: 2037.5354, a: 1}
+  m_IndirectSpecularColor: {r: 1529.9572, g: 1506.0822, b: 2041.3752, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8160,7 +8160,7 @@ Transform:
   m_GameObject: {fileID: 228763273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09282488, z: 0.0004119873}
+  m_LocalPosition: {x: 0, y: -0.22868109, z: 0.0004119873}
   m_LocalScale: {x: 2.1402, y: 2.1402, z: 2.1402}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31046,7 +31046,7 @@ Transform:
   m_GameObject: {fileID: 1017759462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.50277317, z: -0, w: 0.8644184}
-  m_LocalPosition: {x: 2268.6367, y: -0.052532654, z: 1645.4148}
+  m_LocalPosition: {x: 2268.6367, y: -0.089038715, z: 1645.4148}
   m_LocalScale: {x: 4.5446, y: 4.5446, z: 4.5446}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42395,7 +42395,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4990605784490109003, guid: adabe877ca07f4140b35e14e826419d4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adabe877ca07f4140b35e14e826419d4, type: 3}
@@ -70717,7 +70718,7 @@ PrefabInstance:
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4314861
+      value: -3.3526018
       objectReference: {fileID: 0}
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
@@ -71089,6 +71090,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: quests.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: inventoryController
+      value: 
+      objectReference: {fileID: 2121750431}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 436197dbcfa71f649a488b2b7fc5f8c3,
+        type: 2}
+    - target: {fileID: 3385683197605235848, guid: 976e82a8817aef145ba7596305ee8af6,
+        type: 3}
+      propertyPath: 'quests.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3604b8cc692428b48aebe4fd0aa69853,
+        type: 2}
     - target: {fileID: 6055555200398233982, guid: 976e82a8817aef145ba7596305ee8af6,
         type: 3}
       propertyPath: m_Size.x
@@ -72241,7 +72264,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5310402
+      value: 0.08115575
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
