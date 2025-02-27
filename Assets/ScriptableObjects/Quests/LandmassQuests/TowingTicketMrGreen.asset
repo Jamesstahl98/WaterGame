@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: TowingTicketMrGreen
   m_EditorClassIdentifier: 
   questID: 5
-  questName: Help Mr. Green find his Schmolex
-  questDescription: 
+  questName: Mr. Green's Schmolex
+  questDescription: Help Mr. Green find his Schmolex. It is somewhere between him
+    and the shop to the east.
   RewardMoney: 0
   RewardItems:
   - {fileID: 11400000, guid: 5d61114ed372a25428432d3d5a8b7c36, type: 2}
@@ -22,7 +23,7 @@ MonoBehaviour:
   questType: 0
   item: {fileID: 11400000, guid: 794382c0a5adea04cb99dc4e61d63898, type: 2}
   collectAmount: 0
-  isComplete: 0
+  isComplete: 1
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 23e277ba195f8604cbe080063246c14f,
       type: 2}
@@ -115,7 +116,8 @@ MonoBehaviour:
       type: 2}
     targetSprite: {fileID: 0}
     sentence: I dropped it overboard somewhere between here and the shop to the east.
-      Bring it to me and I'll give you a towing ticket.
+      The waters are quite deep so you'll need a fishing line that is atleast 100
+      meters.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:

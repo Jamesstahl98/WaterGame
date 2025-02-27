@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 4
   questName: Get a towing ticket
-  questDescription: 
+  questDescription: 'Find a towing ticket. Tony Towtruck said a man to the east bought
+    them all. '
   RewardMoney: 0
   RewardItems: []
   isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: 5d61114ed372a25428432d3d5a8b7c36, type: 2}
   collectAmount: 1
-  isComplete: 0
+  isComplete: 1
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: e494318f88ca7964e9e0eb5a501abad1,
       type: 2}

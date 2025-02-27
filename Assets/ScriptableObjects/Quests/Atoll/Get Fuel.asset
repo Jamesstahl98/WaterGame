@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 3
   questName: Get Fuel
-  questDescription: 
+  questDescription: Get Fuel. Mr. Speed said it could be bought from the shop on
+    the main island of the atoll.
   RewardMoney: 0
   RewardItems:
   - {fileID: 11400000, guid: 647bde423c3d0b1459b57da2a00c703e, type: 2}
+  isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: e8ae79ee0547e9946b94e16ec6374f7f, type: 2}
   collectAmount: 1
