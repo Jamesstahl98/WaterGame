@@ -17,11 +17,11 @@ MonoBehaviour:
   questDescription: 
   RewardMoney: 0
   RewardItems: []
-  transportToPosition: {x: 2027.2235, y: 0, z: 1141.2156}
+  isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: 5d61114ed372a25428432d3d5a8b7c36, type: 2}
   collectAmount: 1
-  isComplete: 1
+  isComplete: 0
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: e494318f88ca7964e9e0eb5a501abad1,
       type: 2}
@@ -66,8 +66,8 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: e494318f88ca7964e9e0eb5a501abad1,
       type: 2}
     targetSprite: {fileID: 21300000, guid: 78c24e345eecfb84f94d4f426e25f54a, type: 3}
-    sentence: The ticket looks like this. I usually sell them for 50 bucks, but some
-      fellow just bought them all.
+    sentence: I usually sell the tickets for 50 bucks, but some fellow just bought
+      them all.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
@@ -75,7 +75,7 @@ MonoBehaviour:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: e494318f88ca7964e9e0eb5a501abad1,
       type: 2}
-    targetSprite: {fileID: 21300000, guid: 78c24e345eecfb84f94d4f426e25f54a, type: 3}
+    targetSprite: {fileID: 0}
     sentence: I saw him heading east if you wanna catch up to him.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
