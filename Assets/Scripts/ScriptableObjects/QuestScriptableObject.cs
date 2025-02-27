@@ -2,6 +2,7 @@ using HeneGames.DialogueSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Quest", menuName = "ScriptableObjects/QuestScriptableObject")]
@@ -12,6 +13,7 @@ public class QuestScriptableObject : ScriptableObject
     public string questDescription;
     public int RewardMoney;
     public List<ScriptableObject> RewardItems;
+    public bool isTransport;
 
     public QuestType questType;
     public enum QuestType

@@ -27,8 +27,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool stopMovement;
 
+    public delegate void TransportPlayerDelegate(Vector3 position);
+    public static TransportPlayerDelegate TransportPlayerHandlerDelegate;
+
     void Awake()
     {
+        TransportPlayerHandlerDelegate += TransportPlayer;
         PlayerStats.UpgradeHandlerDelegate += UpdateStats;
         UpdateStats();
         rb = GetComponent<Rigidbody>();
@@ -36,7 +40,10 @@ public class PlayerMovement : MonoBehaviour
         transform.position = PlayerStats.PlayerPosition;
         Physics.SyncTransforms();
     }
-
+    private void TransportPlayer(Vector3 position)
+    {
+        transform.position = position;
+    }
     void Update()
     {
         CapSpeed();

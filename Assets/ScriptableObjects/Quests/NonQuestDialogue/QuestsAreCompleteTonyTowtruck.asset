@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff0cbc52b008dd4fb964b1c3c05f323, type: 3}
-  m_Name: QuestsAreCompleteMrSpeed
+  m_Name: QuestsAreCompleteTonyTowtruck
   m_EditorClassIdentifier: 
   questID: 0
-  questName: QuestsCompleteMrSpeed
+  questName: QuestsCompleteTonyTowTruck
   questDescription: DescriptionTest
   RewardMoney: 0
   RewardItems: []
@@ -23,23 +23,26 @@ MonoBehaviour:
   collectAmount: 0
   isComplete: 0
   pickUpSentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 2684a9af969d8c84bb5a8cfcb4742477,
+  - dialogueCharacter: {fileID: 11400000, guid: e494318f88ca7964e9e0eb5a501abad1,
       type: 2}
     targetSprite: {fileID: 0}
-    sentence: Thanks a bunch.
+    sentence: Alright chief, let me tow your boat
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
-        m_Calls: []
-  - dialogueCharacter: {fileID: 11400000, guid: 2684a9af969d8c84bb5a8cfcb4742477,
-      type: 2}
-    targetSprite: {fileID: 0}
-    sentence: Now I can make it home to my family
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000}
+          m_TargetAssemblyTypeName: QuestScriptableObject, Assembly-CSharp
+          m_MethodName: TransportPlayer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   notCompleteSentences: []
   completeSentences: []

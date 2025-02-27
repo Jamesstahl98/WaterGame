@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff0cbc52b008dd4fb964b1c3c05f323, type: 3}
   m_Name: QuestsAreComplete
   m_EditorClassIdentifier: 
-  questID: 1
+  questID: 0
   questName: QuestsAreCompleteStartIsland
   questDescription: DescriptionTest
   RewardMoney: 0
   RewardItems: []
+  transportToPosition: {x: 0, y: 0, z: 0}
   questType: 0
   item: {fileID: 0}
   collectAmount: 0
@@ -41,13 +42,4 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   notCompleteSentences: []
-  completeSentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 90efb75af9d62344eafb3670bcca5a43,
-      type: 2}
-    targetSprite: {fileID: 0}
-    sentence: You did it!
-    skipDelayTime: 0
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
+  completeSentences: []

@@ -62,6 +62,7 @@ namespace HeneGames.DialogueSystem
                 {
                     Sentences[Sentences.Count - 1].sentenceEvent.AddListener(CompleteQuest);
                 }
+                
                 //Trigger event inside DialogueTrigger component
                 if (dialogueTrigger != null)
                 {
@@ -232,6 +233,17 @@ namespace HeneGames.DialogueSystem
             //If last sentence stop dialogue and return
             if (currentSentence > Sentences.Count - 1)
             {
+                if (quest.isTransport)
+                {
+                    try
+                    {
+                        GetComponent<TransportPlayer>().Transport();
+                    }
+                    catch
+                    {
+                        Debug.Log("Transport script not found");
+                    }
+                }
                 StopDialogue();
 
                 lastSentence = true;
