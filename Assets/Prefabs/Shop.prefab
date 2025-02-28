@@ -82,6 +82,7 @@ MonoBehaviour:
   userInterfaceGraphic: {fileID: 0}
   inventory: {fileID: 0}
   shopInventory: []
+  cameraCustomScript: {fileID: 0}
 --- !u!1001 &299536525436900735
 PrefabInstance:
   m_ObjectHideFlags: 0
