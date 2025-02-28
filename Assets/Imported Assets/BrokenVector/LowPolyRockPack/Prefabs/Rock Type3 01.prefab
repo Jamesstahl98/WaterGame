@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3350568}
   - component: {fileID: 2365668}
   - component: {fileID: -3699198979103277691}
+  - component: {fileID: 2085235863096091593}
   m_Layer: 0
   m_Name: Rock Type3 01
   m_TagString: Untagged
@@ -110,3 +111,24 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!65 &2085235863096091593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.444872, y: 2.7968462, z: 1.4384956}
+  m_Center: {x: 0.06533378, y: 1.2532521, z: 0.046627223}
