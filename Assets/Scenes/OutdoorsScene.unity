@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1534.6427, g: 1519.8107, b: 2082.6956, a: 1}
+  m_IndirectSpecularColor: {r: 1534.2765, g: 1512.4318, b: 2053.0588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8296,7 +8296,7 @@ Transform:
   m_GameObject: {fileID: 228763273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.23782241, z: 0.0004119873}
+  m_LocalPosition: {x: 0, y: -0.17775255, z: 0.000289917}
   m_LocalScale: {x: 2.1402, y: 2.1402, z: 2.1402}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31319,7 +31319,7 @@ Transform:
   m_GameObject: {fileID: 1017759462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.50277317, z: -0, w: 0.8644184}
-  m_LocalPosition: {x: 2268.6367, y: -0.13222754, z: 1645.4148}
+  m_LocalPosition: {x: 2268.6367, y: -0.20244393, z: 1645.415}
   m_LocalScale: {x: 4.5446, y: 4.5446, z: 4.5446}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44451,6 +44451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665187968440905148, guid: 913d20a759f96264984c7b13c127a999,
         type: 3}
+      propertyPath: questIndicator
+      value: 
+      objectReference: {fileID: 1430360682}
+    - target: {fileID: 7665187968440905148, guid: 913d20a759f96264984c7b13c127a999,
+        type: 3}
       propertyPath: inventoryController
       value: 
       objectReference: {fileID: 2121750431}
@@ -44485,6 +44490,12 @@ Transform:
 --- !u!4 &1430360681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4577138165694455795, guid: 913d20a759f96264984c7b13c127a999,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430360679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1430360682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 636367198145224266, guid: 913d20a759f96264984c7b13c127a999,
     type: 3}
   m_PrefabInstance: {fileID: 1430360679}
   m_PrefabAsset: {fileID: 0}
@@ -71204,7 +71215,7 @@ PrefabInstance:
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3296163
+      value: -3.2626936
       objectReference: {fileID: 0}
     - target: {fileID: 3867988955935571005, guid: aa70f82ba6bc4e64f8b9d77004fde085,
         type: 3}
@@ -72750,7 +72761,7 @@ PrefabInstance:
     - target: {fileID: 7338289853403418511, guid: d7d59a2c04794524bb10db725e4753bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09112491
+      value: -0.27844888
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73102,6 +73113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665187968440905148, guid: 913d20a759f96264984c7b13c127a999,
         type: 3}
+      propertyPath: questIndicator
+      value: 
+      objectReference: {fileID: 4525072897876527329}
+    - target: {fileID: 7665187968440905148, guid: 913d20a759f96264984c7b13c127a999,
+        type: 3}
       propertyPath: quests.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -73135,6 +73151,12 @@ PrefabInstance:
 --- !u!4 &4525072897876527328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4577138165694455795, guid: 913d20a759f96264984c7b13c127a999,
+    type: 3}
+  m_PrefabInstance: {fileID: 4525072897876527327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4525072897876527329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 636367198145224266, guid: 913d20a759f96264984c7b13c127a999,
     type: 3}
   m_PrefabInstance: {fileID: 4525072897876527327}
   m_PrefabAsset: {fileID: 0}

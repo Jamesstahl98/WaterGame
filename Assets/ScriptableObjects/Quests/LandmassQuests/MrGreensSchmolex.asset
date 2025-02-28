@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff0cbc52b008dd4fb964b1c3c05f323, type: 3}
-  m_Name: TowingTicketMrGreen
+  m_Name: MrGreensSchmolex
   m_EditorClassIdentifier: 
   questID: 5
   questName: Mr. Green's Schmolex
@@ -22,7 +22,7 @@ MonoBehaviour:
   isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: 794382c0a5adea04cb99dc4e61d63898, type: 2}
-  collectAmount: 0
+  collectAmount: 1
   isComplete: 1
   pickUpSentences:
   - dialogueCharacter: {fileID: 11400000, guid: 23e277ba195f8604cbe080063246c14f,

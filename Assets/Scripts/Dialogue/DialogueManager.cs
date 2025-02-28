@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace HeneGames.DialogueSystem
     {
         [SerializeField] private List<QuestScriptableObject> quests;
         [SerializeField] private InventoryController inventoryController;
+        [SerializeField] private GameObject questIndicator;
 
         private QuestScriptableObject quest;
         private int currentSentence;
@@ -43,6 +45,10 @@ namespace HeneGames.DialogueSystem
                     this.quest = quest;
                     break;
                 }
+            }
+            if (quests.IndexOf(quest) + 1 < quests.Count)
+            {
+                questIndicator.SetActive(true);
             }
         }
 
@@ -191,8 +197,12 @@ namespace HeneGames.DialogueSystem
 
         public void StartDialogue()
         {
+            if (quests.IndexOf(quest) + 1 == quests.Count)
+            {
+                questIndicator.SetActive(false);
+            }
             //Start event
-            if(dialogueTrigger != null)
+            if (dialogueTrigger != null)
             {
                 dialogueTrigger.startDialogueEvent.Invoke();
             }
@@ -344,6 +354,9 @@ namespace HeneGames.DialogueSystem
                 inventoryController.CheckForEmptyItemSlots();
             }
             inventoryController.UpdateMoney(quest.RewardMoney);
+            Debug.Log("index:" + quests.IndexOf(quest));
+            Debug.Log("count:" + quests.Count);
+
             if (quests.IndexOf(quest) + 1 < quests.Count)
             {
                 Debug.Log("Follow up quest found");
