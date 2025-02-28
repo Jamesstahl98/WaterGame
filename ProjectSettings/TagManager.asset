@@ -8,6 +8,7 @@ TagManager:
   - Fishable
   - FishSchool
   - SceneChanger
+  - Terrain
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCollisionEvents : MonoBehaviour
 {
     [SerializeField] private IInteractable currentInteractable;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private PlayerMovement playerMovement;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -22,6 +24,11 @@ public class PlayerCollisionEvents : MonoBehaviour
             other.gameObject.GetComponent<IInteractable>().PlayerLeftTrigger();
             currentInteractable = null;
         }
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        
     }
 
     public void Interact()
