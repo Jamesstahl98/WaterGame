@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TowingTicketQuest
   m_EditorClassIdentifier: 
   questID: 4
+  questGiver: Tony Towtruck
   questName: Get a towing ticket
   questDescription: 'Find a towing ticket. Tony Towtruck said a man to the east bought
     them all. '

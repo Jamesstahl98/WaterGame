@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FollowUpQuest
   m_EditorClassIdentifier: 
   questID: 2
+  questGiver: Guy
   questName: Collect Herring
   questDescription: Collect one Herring. They can be fished in the open sea.
   RewardMoney: 10

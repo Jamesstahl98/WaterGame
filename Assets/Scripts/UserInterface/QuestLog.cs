@@ -24,6 +24,7 @@ public class QuestLog : MonoBehaviour
         {
             GameObject questObject = Instantiate(questObjectPrefab);
             questObject.transform.SetParent(itemsParent);
+            questObject.transform.Find("QuestGiver").GetComponent<TextMeshProUGUI>().text = quest.questGiver;
             questObject.transform.Find("QuestDescription").GetComponent<TextMeshProUGUI>().text = quest.questDescription;
             questObject.transform.Find("Image").GetComponent<Image>().sprite = (quest.item as IPickupable).GetSprite();
         }

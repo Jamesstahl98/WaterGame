@@ -9,6 +9,7 @@ using UnityEngine;
 public class QuestScriptableObject : ScriptableObject
 {
     public int questID;
+    public string questGiver;
     public string questName;
     public string questDescription;
     public int RewardMoney;

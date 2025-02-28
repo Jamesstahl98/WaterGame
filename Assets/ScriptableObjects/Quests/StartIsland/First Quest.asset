@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: First Quest
   m_EditorClassIdentifier: 
   questID: 1
+  questGiver: Guy
   questName: Collect Goby
   questDescription: Fish one Goby. They can be fished in costal waters.
   RewardMoney: 10
   RewardItems:
   - {fileID: 11400000, guid: 26a24252be545914b993aef9c4dc5d16, type: 2}
+  isTransport: 0
   questType: 0
   item: {fileID: 11400000, guid: 30b0270369654f34f8ba7f10b8fc21a1, type: 2}
   collectAmount: 1

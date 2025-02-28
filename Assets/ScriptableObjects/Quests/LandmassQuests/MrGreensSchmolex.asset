@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MrGreensSchmolex
   m_EditorClassIdentifier: 
   questID: 5
+  questGiver: Mr. Green
   questName: Mr. Green's Schmolex
   questDescription: Help Mr. Green find his Schmolex. It is somewhere between him
     and the shop to the east.
