@@ -18,6 +18,15 @@ public class FishingSpotBuilder : MonoBehaviour
         {
             for (int j = 0; j < fishingSpot.fishesCount[i]; j++)
             {
+                if (fishingSpot.fishesCount[i] < 1)
+                {
+                    var roll = Random.Range(0, 101) / 100f;
+
+                    if(roll < fishingSpot.fishesCount[i])
+                    {
+                        continue;
+                    }
+                }
                 var fish = Instantiate(fishPrefab).GetComponent<FishController>();
                 fish.Init(fishingSpot.fishes[i] as IPickupable);
             }

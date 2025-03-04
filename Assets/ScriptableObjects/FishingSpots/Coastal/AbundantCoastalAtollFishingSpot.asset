@@ -15,4 +15,6 @@ MonoBehaviour:
   fishes:
   - {fileID: 11400000, guid: ff16244d1b4cedd4686245ef227fb03e, type: 2}
   - {fileID: 11400000, guid: ed32e34caac23a541aa65ba31c608f5c, type: 2}
-  fishesCount: 0400000002000000
+  fishesCount:
+  - 4
+  - 2
