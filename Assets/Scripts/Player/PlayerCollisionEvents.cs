@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCollisionEvents : MonoBehaviour
 {
-    [SerializeField] private IInteractable currentInteractable;
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private PlayerMovement playerMovement;
+    private IInteractable currentInteractable;
+
+    [SerializeField] private CompassBar compassBar;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -14,6 +14,10 @@ public class PlayerCollisionEvents : MonoBehaviour
         {
             currentInteractable = other.gameObject.GetComponent<IInteractable>();
             currentInteractable.PlayerEnteredTrigger();
+        }
+        if(other.tag == "CompassMarkerTrigger")
+        {
+            compassBar.AddMarker(other.transform.position, other.GetComponent<SpriteRenderer>().sprite);
         }
     }
 
@@ -23,6 +27,10 @@ public class PlayerCollisionEvents : MonoBehaviour
         {
             other.gameObject.GetComponent<IInteractable>().PlayerLeftTrigger();
             currentInteractable = null;
+        }
+        if (other.tag == "CompassMarkerTrigger")
+        {
+            compassBar.RemoveMarker(other.transform.position);
         }
     }
 

@@ -21,3 +21,4 @@ MonoBehaviour:
   minDepth: 0
   maxDepth: 0
   isSellable: 0
+  isUnique: 1

@@ -9,6 +9,7 @@ TagManager:
   - FishSchool
   - SceneChanger
   - Terrain
+  - CompassMarkerTrigger
   layers:
   - Default
   - TransparentFX
