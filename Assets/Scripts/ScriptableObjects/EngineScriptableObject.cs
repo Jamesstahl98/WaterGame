@@ -16,6 +16,7 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float minDepth;
     public float maxDepth;
     public bool isSellable;
+    public bool isUnique;
 
     [Header("Upgrade stats")]
     public float maxSpeedUpgradeAmount;
@@ -30,6 +31,7 @@ public class EngineScriptableObject : ScriptableObject, IPickupable, IConsumable
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
     public bool GetSellableStatus() => isSellable;
+    public bool GetUniqueStatus() => isUnique;
 
     public bool Consume()
     {

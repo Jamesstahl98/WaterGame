@@ -17,6 +17,7 @@ public class ItemScriptableObject : ScriptableObject, IPickupable
     public float minDepth;
     public float maxDepth;
     public bool isSellable;
+    public bool isUnique;
 
     public Sprite GetSprite() => sprite;
     public string GetName() => name;
@@ -27,4 +28,5 @@ public class ItemScriptableObject : ScriptableObject, IPickupable
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
     public bool GetSellableStatus() => isSellable;
+    public bool GetUniqueStatus() => isUnique;
 }

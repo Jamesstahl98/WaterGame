@@ -13,4 +13,5 @@ public interface IPickupable
     float GetMinDepth();
     float GetMaxDepth();
     bool GetSellableStatus();
+    bool GetUniqueStatus();
 }

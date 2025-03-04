@@ -16,6 +16,7 @@ public class FishingHookScriptableObject : ScriptableObject, IPickupable, IConsu
     public float minDepth;
     public float maxDepth;
     public bool isSellable;
+    public bool isUnique;
 
     [Header("Upgrade stats")]
     public int maxFishesOnHookUpgradeAmount;
@@ -29,6 +30,7 @@ public class FishingHookScriptableObject : ScriptableObject, IPickupable, IConsu
     public float GetMinDepth() => minDepth;
     public float GetMaxDepth() => maxDepth;
     public bool GetSellableStatus() => isSellable;
+    public bool GetUniqueStatus() => isUnique;
 
     public bool Consume()
     {
