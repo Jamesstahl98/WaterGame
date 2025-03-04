@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float minThrust;
     [SerializeField] private float thrustTick;
     [SerializeField] private Slider thrustSlider;
+    [SerializeField] private TextMeshProUGUI speedText;
 
     [Header("Rotation")]
     [SerializeField] private float torqueTick;
@@ -47,6 +51,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CapSpeed();
+        PrintSpeed();
+    }
+
+    private void PrintSpeed()
+    {
+        speedText.text = $"{GetSpeed().ToString("N0")} km/h";
+    }
+    private float GetSpeed()
+    {
+        return rb.velocity.magnitude * 5;
     }
 
     void FixedUpdate()
