@@ -8,6 +8,7 @@ public class FishingHookController : MonoBehaviour
 {
     private bool hookDescending = true;
     private float horizontal;
+    private float vertical;
     private float speed;
     private Vector2 fishingDepthTarget;
     private Rigidbody2D rb;
@@ -22,7 +23,6 @@ public class FishingHookController : MonoBehaviour
     [Header("Torque")]
     [SerializeField] private float baseTorque = 3;
     [SerializeField] private float torqueModifier = 0.01f;
-    [SerializeField] private float baseTorqueReduction = 1f;
     [SerializeField] private float torqueReductionModifier = 0.1f;
     [SerializeField] private float torqueReductionCap = 3f;
     [SerializeField] private float maxRotation = 60f;
@@ -70,6 +70,7 @@ public class FishingHookController : MonoBehaviour
     private void GetInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space) && hookDescending)
         {
@@ -95,14 +96,12 @@ public class FishingHookController : MonoBehaviour
             speed = -maxSpeed;
         }
 
-        if (rb.velocityY > maxAscendSpeed)
-        {
-            rb.velocityY = maxAscendSpeed;
-        }
+
     }
 
     private void Movement()
     {
+        //Horizontal
         if (horizontal == 1 || horizontal == -1)
         {
             speed += acceleration * horizontal;
@@ -116,6 +115,20 @@ public class FishingHookController : MonoBehaviour
         else if (speed < 0)
         {
             speed += deceleration;
+        }
+
+        //Vertical
+        if (vertical == 1)
+        {
+            ascendSpeed = maxAscendSpeed * 2;
+        }
+        else if (vertical == -1)
+        {
+            ascendSpeed = maxAscendSpeed / 2;
+        }
+        else
+        {
+            ascendSpeed = maxAscendSpeed;
         }
 
         rb.velocity = new Vector2(speed, ascendSpeed);
