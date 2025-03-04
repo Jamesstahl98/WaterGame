@@ -23,10 +23,10 @@ public class CompassBar : MonoBehaviour
     }
     private void Update()
     {
-        SetMarkerPosition(northMarkerTransform, Vector3.forward * 1000);
-        SetMarkerPosition(eastMarkerTransform, Vector3.right * 1000);
-        SetMarkerPosition(westMarkerTransform, Vector3.left * 1000);
-        SetMarkerPosition(southMarkerTransform, Vector3.back * 1000);
+        SetMarkerPosition(northMarkerTransform, Vector3.forward * 100000);
+        SetMarkerPosition(eastMarkerTransform, Vector3.right * 100000);
+        SetMarkerPosition(westMarkerTransform, Vector3.left * 100000);
+        SetMarkerPosition(southMarkerTransform, Vector3.back * 100000);
     }
 
     private void SetMarkerPosition(RectTransform markerTransform, Vector3 worldPosition)
