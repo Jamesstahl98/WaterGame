@@ -22,7 +22,6 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private Button consumeButton;
     [SerializeField] private GameObject itemDescriptionObject;
     [SerializeField] private Color itemBackgroundColor;
-    private Dictionary<IPickupable, int> items;
     private IPickupable selectedItem;
     private GameObject selectedItemObject;
 
@@ -37,9 +36,7 @@ public class InventoryController : MonoBehaviour
 
     private void Awake()
     {
-        items = PlayerInventory.ItemsInInventory;
-
-        foreach (KeyValuePair<IPickupable, int> entry in items)
+        foreach (KeyValuePair<IPickupable, int> entry in PlayerInventory.ItemsInInventory)
         {
             var item = Instantiate(itemPrefab, itemsParent);
             item.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = entry.Value.ToString();
@@ -58,7 +55,8 @@ public class InventoryController : MonoBehaviour
 
     private void BuySelectedItem()
     {
-        if (selectedShopItem == null || PlayerInventory.Money < selectedShopItem.GetBuyPrice()) { return; }
+        if (selectedShopItem == null || PlayerInventory.Money < selectedShopItem.GetBuyPrice()
+            || (PlayerInventory.ItemsInInventory.ContainsKey(selectedShopItem) && selectedShopItem.GetUniqueStatus())) { return; }
 
         UpdateMoney(-selectedShopItem.GetBuyPrice());
 
@@ -67,20 +65,20 @@ public class InventoryController : MonoBehaviour
 
     public void SellSelectedItem()
     {
-        if (selectedItem == null || items[selectedItem] <= 0 || !IsOpenInShop) { return; }
+        if (selectedItem == null || PlayerInventory.ItemsInInventory[selectedItem] <= 0 || !IsOpenInShop) { return; }
 
         UpdateMoney(selectedItem.GetSellPrice());
-        items[selectedItem]--;
+        PlayerInventory.ItemsInInventory[selectedItem]--;
 
-        if (items[selectedItem] <= 0)
+        if (PlayerInventory.ItemsInInventory[selectedItem] <= 0)
         {
-            items.Remove(selectedItem);
+            PlayerInventory.ItemsInInventory.Remove(selectedItem);
             Destroy(selectedItemObject);
             DeselectItem();
         }
         else
         {
-            selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+            selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = PlayerInventory.ItemsInInventory[selectedItem].ToString();
         }
 
         selectedItem = null;
@@ -88,26 +86,27 @@ public class InventoryController : MonoBehaviour
 
     public void AddItemToInventory(IPickupable item)
     {
-        if (items.ContainsKey(item))
+        if (PlayerInventory.ItemsInInventory.ContainsKey(item))
         {
-            items[item]++;
-            itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text == item.GetName()).transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
+            PlayerInventory.ItemsInInventory[item]++;
+            itemObjects.Find(x => x.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text 
+            == item.GetName()).transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = PlayerInventory.ItemsInInventory[item].ToString();
         }
         else
         {
-            items.Add(item, 1);
+            PlayerInventory.ItemsInInventory.Add(item, 1);
             var newItemObject = Instantiate(itemPrefab, itemsParent);
-            newItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[item].ToString();
+            newItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = PlayerInventory.ItemsInInventory[item].ToString();
             newItemObject.transform.Find("Icon").GetComponent<Image>().sprite = item.GetSprite();
             newItemObject.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = item.GetName();
             itemObjects.Add(newItemObject);
-            newItemObject.GetComponent<Button>().onClick.AddListener(() => { SelectItem(new KeyValuePair<IPickupable, int>(item, items[item]), newItemObject); });
+            newItemObject.GetComponent<Button>().onClick.AddListener(() => { SelectItem(new KeyValuePair<IPickupable, int>(item, PlayerInventory.ItemsInInventory[item]), newItemObject); });
         }
     }
 
     public void CheckForEmptyItemSlots()
     {
-        List<IPickupable> itemsToRemove = items
+        List<IPickupable> itemsToRemove = PlayerInventory.ItemsInInventory
             .Where(item => item.Value <= 0)
             .Select(item => item.Key)
             .ToList();
@@ -120,7 +119,7 @@ public class InventoryController : MonoBehaviour
             {
                 Destroy(itemObject);
             }
-            items.Remove(item);
+            PlayerInventory.ItemsInInventory.Remove(item);
         }
     }
     public void UpdateMoney(int moneyChange)
@@ -165,20 +164,20 @@ public class InventoryController : MonoBehaviour
 
     public void ConsumeSelectedItem()
     {
-        if (selectedItem == null || items[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
+        if (selectedItem == null || PlayerInventory.ItemsInInventory[selectedItem] <= 0 || selectedItem is not IConsumable) { return; }
         var b = (selectedItem as IConsumable).Consume();
         if (b)
         {
-            items[selectedItem]--;
-            if (items[selectedItem] <= 0)
+            PlayerInventory.ItemsInInventory[selectedItem]--;
+            if (PlayerInventory.ItemsInInventory[selectedItem] <= 0)
             {
-                items.Remove(selectedItem);
+                PlayerInventory.ItemsInInventory.Remove(selectedItem);
                 Destroy(selectedItemObject);
                 DeselectItem();
             }
             else
             {
-                selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = items[selectedItem].ToString();
+                selectedItemObject.transform.Find("Amount").GetComponent<TextMeshProUGUI>().text = PlayerInventory.ItemsInInventory[selectedItem].ToString();
             }
         }
         else
@@ -205,6 +204,10 @@ public class InventoryController : MonoBehaviour
         }
         foreach (IPickupable entry in shopItems)
         {
+            if(PlayerInventory.ItemsInInventory.ContainsKey(entry))
+            {
+                continue;
+            }
             var item = Instantiate(itemPrefab, shopItemsParent);
             item.transform.Find("Icon").GetComponent<Image>().sprite = entry.GetSprite();
             item.transform.Find("ItemName").GetComponent<TextMeshProUGUI>().text = entry.GetName();
@@ -215,6 +218,6 @@ public class InventoryController : MonoBehaviour
 
     internal void RemoveItem(IPickupable item, int amount)
     {
-        items[item] -= amount;
+        PlayerInventory.ItemsInInventory[item] -= amount;
     }
 }
